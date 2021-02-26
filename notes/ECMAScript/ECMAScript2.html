@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>2. 变量的解构赋值 | Alfred个人主页</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/iTNpotesBlog.github.io/image/hero.png">
+    <meta name="description" content="Alfred个人博客">
+    
+    <link rel="preload" href="/iTNpotesBlog.github.io/assets/css/0.styles.e48d72c6.css" as="style"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/app.3fa40ee6.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/2.9583a22b.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/58.1f070a48.js" as="script"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/10.87b9a79c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/100.6376891d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/101.7f7df2aa.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/102.69461a6b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/103.a03e7994.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/104.b3760f21.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/105.4fa309ed.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/106.64ef7609.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/107.ead0b44a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/108.5c314f6f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/109.e150bcfe.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/11.f23ba730.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/110.791e204f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/111.6720e7d2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/112.b0c7a73a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/113.d33cd8f3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/114.95c8916d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/115.2eafc17a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/116.ea403138.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/117.41b0b4f2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/118.a0a26c10.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/119.56c63cc9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/12.f338a693.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/120.ca997b32.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/121.4a905c80.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/122.1c159432.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/123.96110809.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/124.e57c7c02.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/125.3f9d8f99.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/126.31e3f6f2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/127.a7083673.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/128.72b3a18b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/129.0be9da10.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/13.4e6aa8b2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/130.0bead77e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/131.a8e94957.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/132.012e8fd3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/133.db0205b2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/134.175a0fa9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/135.52a5c293.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/136.139beb21.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/137.68731f57.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/138.dbb3a75c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/139.67a90691.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/14.24e3b2a7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/140.3a901771.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/141.4daa61ce.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/142.543a26bc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/143.6aac0109.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/144.282d2216.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/145.2925100f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/146.ac4f23a2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/147.6c30e131.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/148.6b6cdd91.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/149.13b4e1b6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/15.00193858.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/150.34245f57.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/151.f8c8c86d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/152.fad2982e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/153.7fa8098d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/154.f3ce466e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/155.2df63da7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/156.0870e385.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/157.c79154ec.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/158.2bcf0577.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/159.2b40e435.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/16.a386bf6a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/160.2cba168f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/161.61024bb8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/162.a645570c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/163.3dd8099f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/164.37ca096c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/165.cdfb409e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/166.ac735087.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/167.add407b0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/168.ee59432d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/169.d70aae5e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/17.eebdfbf2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/170.29a810e4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/171.a4f379a8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/172.54a53818.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/173.46713a60.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/174.a91c60d9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/175.280a8648.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/176.a6dd87b7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/177.585e265f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/178.837e6ee5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/179.7fcb0b21.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/18.3a10912d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/180.a442c457.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/181.bc80dbd7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/19.c2df9040.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/20.05fc30e9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/21.80207f62.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/22.3304827c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/23.c2c99265.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/24.f59f9ef2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/25.02f128e4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/26.bb3c4529.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/27.1d1cdbc0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/28.84cc7beb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/29.c7e0e36a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/3.225f7496.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/30.b9c3c58e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/31.6afac418.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/32.c9856ba5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/33.8917e9fd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/34.8047709e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/35.e615ed04.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/36.3cd9d449.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/37.e4f629bc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/38.9f2c63e1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/39.47516657.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/4.b0822496.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/40.33090a45.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/41.f7dfdf71.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/42.ccf371f9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/43.8549452a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/44.a0152c91.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/45.bd00eb7f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/46.b5a964d8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/47.3921811f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/48.058ba95d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/49.b090b443.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/5.d0bbd789.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/50.34f93f9b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/51.11b5c9bc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/52.73e7dff1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/53.37dcbf9b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/54.3a340ba2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/55.20c0c5fa.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/56.f9be83fb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/57.895932f4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/59.90bf8128.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/6.ca878268.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/60.728fd9ab.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/61.658aa271.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/62.5771135e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/63.3bb463a5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/64.965396b6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/65.50285408.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/66.b4639624.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/67.469a6eda.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/68.c28a2291.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/69.a9378cf0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/7.a5f88da9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/70.9a91f4a2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/71.ccacf8e9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/72.10541da4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/73.eda42565.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/74.6ac1671a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/75.0431fe60.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/76.ab278c66.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/77.08755250.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/78.d3076c63.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/79.345bfa33.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/8.280351ef.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/80.48ffb443.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/81.8f29769b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/82.8e01cc7a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/83.0cd12cd9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/84.0aa029db.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/85.cca9a716.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/86.688299ed.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/87.d80690ed.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/88.06c7a253.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/89.2ce88594.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/9.02b9f35b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/90.46832a57.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/91.44176546.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/92.16b7315d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/93.6734254c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/94.ef44cb08.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/95.5bf49421.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/96.264eb3ba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/97.d64ad9f2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/98.1b28feb7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/99.13fb98eb.js">
+    <link rel="stylesheet" href="/iTNpotesBlog.github.io/assets/css/0.styles.e48d72c6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/iTNpotesBlog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">Alfred个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link router-link-active">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link router-link-active">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript1.html" class="sidebar-link">1. let 和 const 命令</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript2.html" aria-current="page" class="active sidebar-link">2. 变量的解构赋值</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript2.html#基本用法" class="sidebar-link">基本用法</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript2.html#默认值" class="sidebar-link">默认值</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript2.html#不能使用圆括号的情况" class="sidebar-link">不能使用圆括号的情况</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript2.html#可以使用圆括号的情况" class="sidebar-link">可以使用圆括号的情况</a></li></ul></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript3.html" class="sidebar-link">3. 字符串的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript4.html" class="sidebar-link">4. 字符串的新增方法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript5.html" class="sidebar-link">5. 正则的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript6.html" class="sidebar-link">6. 数值的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript7.html" class="sidebar-link">7. 函数的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript8.html" class="sidebar-link">8. 数组的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript9.html" class="sidebar-link">9. 对象的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript10.html" class="sidebar-link">10. 对象的新增方法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript11.html" class="sidebar-link">11. Symbol</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript12.html" class="sidebar-link">12. Set 和 Map 数据结构</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript13.html" class="sidebar-link">13. Proxy</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript14.html" class="sidebar-link">14. Reflect</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript15.html" class="sidebar-link">15. Promise 对象</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript16.html" class="sidebar-link">16. Iterator 和 for...of 循环</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript17.html" class="sidebar-link">17. Generator 函数的语法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript18.html" class="sidebar-link">18. Generator 函数的异步应用</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript19.html" class="sidebar-link">19. async 函数</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript20.html" class="sidebar-link">20. Class 的基本语法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript21.html" class="sidebar-link">21. Class 继承</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript22.html" class="sidebar-link">22. Module 的语法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript23.html" class="sidebar-link">23. Module 的加载实现</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript24.html" class="sidebar-link">24. 编程风格</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript25.html" class="sidebar-link">数据结构</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript26.html" class="sidebar-link">JS算法之深度优先遍历和广度优先遍历</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_2-变量的解构赋值"><a href="#_2-变量的解构赋值" class="header-anchor">#</a> 2. 变量的解构赋值</h1> <blockquote><ol><li>数组的解构赋值</li> <li>对象的解构赋值</li> <li>字符串的解构赋值</li> <li>数值和布尔值的解构赋值</li> <li>函数参数的解构赋值</li> <li>圆括号问题</li> <li>用途</li></ol></blockquote> <h1 id="_1-数组的解构赋值"><a href="#_1-数组的解构赋值" class="header-anchor">#</a> 1. 数组的解构赋值</h1> <h2 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h2> <p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p> <p>以前，为变量赋值，只能直接指定值。</p> <div class="language- extra-class"><pre class="language-text"><code>let a = 1;
+let b = 2;
+let c = 3;
+</code></pre></div><p>ES6 允许写成下面这样</p> <div class="language- extra-class"><pre class="language-text"><code>let [a, b, c] = [1, 2, 3]
+</code></pre></div><p>上面代码表示，可以从数组中提取值，按照对应位置，对变量赋值。</p> <p>本质上，这种写法属于‘模式匹配’，只要等号两边的模式相同，左边的变量就会被赋予对应的值。下面是一些使用嵌套数组进行解构的例子。</p> <div class="language- extra-class"><pre class="language-text"><code>let [foo, [[bar], baz]] = [1, [[2], 3]];
+foo  // 1
+bar  // 2
+baz  // 3
+
+let [ , , third] = ['foo', 'bar', 'baz'];
+third  // baz
+
+let [x, , y] = [1, 2, 3];
+x  // 1
+y  // 3
+
+let [head, ...tail] = [1, 2, 3, 4];
+head  // 1
+tail  // [2, 3, 4]
+
+let [x, y, ...z] = ['a'];
+x   // 'a'
+y   // undefined
+z   // []
+</code></pre></div><p>如果解构不成功，变量的值就等于undefined。</p> <div class="language- extra-class"><pre class="language-text"><code>let [foo] = [];
+let [bar, foo] = [1];
+</code></pre></div><p>以上两种情况都属于解构不成功，foo的值都会等于undefined。</p> <br>
+另一种情况是不完全解构，即等号左边的模式，只能匹配一部分的等号右边的数组，这种情况下，结构依然可以成功。
+<div class="language- extra-class"><pre class="language-text"><code>let [x, y] = [1, 2, 3];
+x // 1
+y // 2
+
+let [a, [b], d] = [1, [2, 3], 4];
+a // 1
+b // 2
+d // 4
+</code></pre></div><p>上面两个例子，都属于不完全解构，但是可以成功。</p> <p>如果等号的右边不是数组（或者严格地说，不是可遍历的结构，参见《Iterator》一章），那么将会报错。</p> <div class="language- extra-class"><pre class="language-text"><code>// 报错
+let [foo] = 1;
+let [foo] = false;
+let [foo] = NaN;
+let [foo] = undefined;
+let [foo] = null;
+let [foo] = {};
+</code></pre></div><p>上面的语句都会报错，因为等号右边的值，要么转为对象以后不具备 Iterator 接口（前五个表达式），要么本身就不具备 Iterator接口（最后一个表达式）。</p> <p>对于 Set 结构，也可以使用数组的解构赋值。</p> <div class="language- extra-class"><pre class="language-text"><code>let [x, y, z] = new Set(['a', 'b', 'c']);
+x   // 'a'
+</code></pre></div><p>事实上，只要某种数据结构具有 Iterator 接口，都可以采用数组形式的解构赋值。</p> <div class="language- extra-class"><pre class="language-text"><code>function* fibs() {
+  let a = 0;
+  let b = 1;
+  while (true) {
+    yield a;
+    [a, b] = [b, a + b];
+  }
+}
+
+let [first, second, third, fourth, fifth, sixth] = fibs();
+sixth // 5
+</code></pre></div><p>上面代码中，fibs是一个 Generator 函数（参见《Generator 函数》一章），原生具有 Iterator 接口。解构赋值会依次从这个接口获取值。</p> <h2 id="默认值"><a href="#默认值" class="header-anchor">#</a> 默认值</h2> <p>解构赋值允许使用默认值。</p> <div class="language- extra-class"><pre class="language-text"><code>let [foo = true] = [];
+foo //true
+
+let [x, y = 'b'] = ['a']    // x = 'a', y = 'b'
+let [x, y = 'b'] = ['a', undefined];    // x = 'a', y = 'b'
+</code></pre></div><p>注意， ES6内部使用严格相等运算符（===）， 判断一个位置是否有值，所以，只有当一个数组成员严格等于 <strong>undefined</strong>，默认值才会生效</p> <div class="language- extra-class"><pre class="language-text"><code>let [x = 1] = [undefined];
+x // 1
+
+let [x = 1] = [null];
+x // null
+</code></pre></div><p>上面代码中，如果一个数组成员是 <strong>null</strong> ，默认值就不会生效，因为 <strong>null</strong> 不严格等于 <strong>undefined</strong>。</p> <p>如果默认值是一个表达式， 那么这个表达式是惰性求值的，即只有在用到的时候，才会求值。</p> <div class="language- extra-class"><pre class="language-text"><code>function f() {
+  console.log('aaa');
+}
+
+let [x = f()] = [1];
+</code></pre></div><p>上面代码中，因为 <strong>x</strong> 能取到值，所以函数 <strong>f</strong> 根本不会执行。上面的代码其实等价于下面的代码。</p> <div class="language- extra-class"><pre class="language-text"><code>let x;
+if ([1][0] === undefined) {
+    x = f();
+} else {
+    x = [1][0]
+}
+</code></pre></div><p>默认值可以引用解构赋值的其他变量，但该变量必须已经声明。</p> <div class="language- extra-class"><pre class="language-text"><code>let [x = 1, y = x] = [];     // x=1; y=1
+let [x = 1, y = x] = [2];    // x=2; y=2
+let [x = 1, y = x] = [1, 2]; // x=1; y=2
+let [x = y, y = 1] = [];     // ReferenceError: y is not defined
+</code></pre></div><p>上面最后一个表达式之所以会报错，是因为 <strong>x</strong> 用 <strong>y</strong> 做默认值时，<strong>y</strong> 还没有声明。</p> <hr> <br> <h1 id="_2-对象的解构赋值"><a href="#_2-对象的解构赋值" class="header-anchor">#</a> 2. 对象的解构赋值</h1> <p>解构不仅可以用于数组，还可以用于对象。</p> <div class="language- extra-class"><pre class="language-text"><code>let { foo, bar} = { foo: 'aaa', bar: 'bbb'};
+foo     // 'aaa'
+bar     // 'bbb'
+</code></pre></div><p>对象的解构与数组有一个重要的不同，数组的元素是按照次序排列的，变量的取值由他的位置决定；而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</p> <div class="language- extra-class"><pre class="language-text"><code>let { bar, foo } = { foo: &quot;aaa&quot;, bar: &quot;bbb&quot; };
+foo // &quot;aaa&quot;
+bar // &quot;bbb&quot;
+
+let { baz } = { foo: &quot;aaa&quot;, bar: &quot;bbb&quot; };
+baz // undefined
+</code></pre></div><p>上面代码的第一例子，等号左边的两个变量的次序，与等号右边两个同名属性的次序不一致，但是对于取值完全没有影响。第二个例子的变量没有对应的同名属性，导致取不到值，最后等于 <strong>undefined</strong></p> <p>如果变量名与属性名不一致，必须写成下面这样。</p> <div class="language- extra-class"><pre class="language-text"><code>let { foo: baz } = { foo: 'aaa', bar: 'bbb'};
+baz     // 'aaa'
+
+let obj = { first: 'hello', last: 'world' };
+let { first: f, last: l } = obj;
+f   // 'hello'
+l   // 'world'
+</code></pre></div><p>这实际上说明，对象的解构赋值是下面形式的简写（参见《对象的扩展》一章）。</p> <div class="language- extra-class"><pre class="language-text"><code>let { foo: foo, bar: bar } = { foo: &quot;aaa&quot;, bar: &quot;bbb&quot; };
+</code></pre></div><p>也就是说，对象的解构赋值的内部机制，是先找到同名属性，然后再赋值给对应的变量。真正被赋值的是后者，而不是前者</p> <div class="language- extra-class"><pre class="language-text"><code>let { foo: baz } = { foo: &quot;aaa&quot;, bar: &quot;bbb&quot; };
+baz // &quot;aaa&quot;
+foo // error: foo is not defined
+</code></pre></div><p>上面代码中，<strong>foo</strong> 是匹配的模式， <strong>baz</strong> 才是变量，真正被赋值的是变量 <strong>baz</strong>，而不是模式 <strong>foo</strong>。</p> <p>与数组一样，解构也可以用于嵌套解构的对象。</p> <div class="language- extra-class"><pre class="language-text"><code>let obj = {
+    p: ['hello', { y: 'world' }]
+};
+let { p: [x, { y }] } = obj;
+x // &quot;Hello&quot;
+y // &quot;World&quot;
+</code></pre></div><p>注意， 这时 <strong>p</strong> 是模式，不是变量，因此不会被赋值。如果 <strong>p</strong> 也要作为变量赋值，可以写成下面这样</p> <div class="language- extra-class"><pre class="language-text"><code>let obj = {
+  p: [
+    'Hello',
+    { y: 'World' }
+  ]
+};
+
+let { p, p: [x, { y }] } = obj;
+x // &quot;Hello&quot;
+y // &quot;World&quot;
+p // [&quot;Hello&quot;, {y: &quot;World&quot;}]
+</code></pre></div><br> <p>下面是另一个例子。</p> <div class="language- extra-class"><pre class="language-text"><code>const node = {
+  loc: {
+    start: {
+      line: 1,
+      column: 5
+    }
+  }
+};
+
+let { loc, loc: { start }, loc: { start: { line }} } = node;
+line // 1
+loc  // Object {start: Object}
+start // Object {line: 1, column: 5}
+</code></pre></div><p>上面代码有三次解构赋值，分别是对 <strong>loc</strong>、 <strong>start</strong>、<strong>line</strong> 三个属性的解构赋值。注意，最后一次对 <strong>line</strong> 属性的解构赋值之中，只有 <strong>line</strong> 是变量， <strong>loc</strong> 和 <strong>start</strong> 都是模式，不是变量。</p> <br>
+下面是嵌套赋值的例子。
+<div class="language- extra-class"><pre class="language-text"><code>let obj = {};
+let arr = [];
+
+({ foo: obj.prop, bar: arr[0] }) = { foo: '123', bar: 'true'}
+obj     // { prop: '123' }
+arr     // [ true ]
+</code></pre></div><p>对象的解构也可以指定默认值</p> <div class="language- extra-class"><pre class="language-text"><code>var {x = 3} = {};
+x   // 3
+
+var {x, y = 5} = {x: 1};
+x // 1
+y // 5
+
+var {x: y = 3} = {};
+y // 3
+
+var {x: y = 3} = {x: 5};
+y // 5
+
+var { message: msg = 'Something went wrong' } = {};
+msg // &quot;Something went wrong&quot;
+</code></pre></div><p>默认值生效的条件是，对象的属性值严格等于 <strong>undefined</strong>。</p> <div class="language- extra-class"><pre class="language-text"><code>var {x = 3} = {x: undefined};
+x // 3
+
+var {x = 3} = {x: null};
+x // null
+</code></pre></div><p>上面代码中，属性 <strong>x</strong> 等于 <strong>null</strong>，因为 <strong>null</strong> 与 <strong>undefined</strong> 不严格相等，所以是个有效的赋值，导致默认值 <strong>3</strong> 不会生效。</p> <p>如果解构失败，变量的值等于 <strong>undefined</strong> 。</p> <div class="language- extra-class"><pre class="language-text"><code>let {foo} = {bar: 'baz'};
+foo // undefined
+</code></pre></div><p>如果解构模式是嵌套的对象，而且子对象所在的父属性不存在，那么将会报错。</p> <div class="language- extra-class"><pre class="language-text"><code>// 报错
+let { foo: {bar}} = {baz: 'baz'}
+</code></pre></div><p>上面代码中，等号左边对象的 <strong>foo</strong> 属性，对应一个子对象。该子对象的 <strong>bar</strong> 属性，解构时会报错。原因很简单，因为 <strong>foo</strong> 这时等于 <strong>undefined</strong>，再取子属性就会报错，请看下面的代码。</p> <div class="language- extra-class"><pre class="language-text"><code>let _tmp = { baz: 'baz' };
+_tmp.foo.bar    // 报错
+</code></pre></div><p>如果要将一个已经声明的变量用于解构赋值，必须非常小心。</p> <div class="language- extra-class"><pre class="language-text"><code>// 错误的写法
+let x;
+{x} = {x: 1};
+// SyntaxError: syntax error
+</code></pre></div><p>上面代码的写法会报错，因为 JavaScript 引擎会将{x}理解成一个代码块，从而发生语法错误。只有不将大括号写在行首，避免 JavaScript 将其解释为代码块，才能解决这个问题。</p> <div class="language- extra-class"><pre class="language-text"><code>// 正确的写法
+let x;
+({x} = {x: 1});
+</code></pre></div><p>上面代码将整个解构赋值语句，放在一个圆括号里面，就可以正确执行。关于圆括号与解构赋值的关系，参见下文。</p> <p>解构赋值允许等号左边的模式之中，不放置任何变量名。因此，可以写出非常古怪的赋值表达式。</p> <div class="language- extra-class"><pre class="language-text"><code>({} = [true, false]);
+({} = 'abc');
+({} = []);
+</code></pre></div><p>上面的表达式虽然毫无意义，但是语法是合法的，可以执行。</p> <p>对象的解构赋值，可以很方便地将现有对象的方法，赋值给某个变量。</p> <div class="language- extra-class"><pre class="language-text"><code>let { log, sin, cos } = Math;
+</code></pre></div><p>上面代码将 <strong>Math</strong> 对象的对数、正弦、余弦三个方法，赋值到对应的变量上，使用起来就会方便很多。</p> <p>由于数组本质是特殊的对象，因此可以对数组进行对象属性的解构。</p> <div class="language- extra-class"><pre class="language-text"><code>let arr = [1, 2, 3];
+let {0 : first, [arr.length - 1] : last} = arr;
+first // 1
+last // 3
+</code></pre></div><p>上面代码对数组进行对象解构。数组 <strong>arr</strong> 的 <strong>0</strong> 键对应的值是 <strong>1</strong>，<strong>[arr.length - 1]</strong> 就是 <strong>2</strong> 键，对应的值是 <strong>3</strong> 。方括号这种写法，属于“属性名表达式”（参见《对象的扩展》一章）。</p> <hr> <br> <h1 id="_3-字符串的解构赋值"><a href="#_3-字符串的解构赋值" class="header-anchor">#</a> 3. 字符串的解构赋值</h1> <p>字符串也可以解构赋值。这是因为此时，字符串被转换成了一个类似数组的对象。</p> <div class="language- extra-class"><pre class="language-text"><code>const [a, b, c, d, e] = 'hello';
+a // &quot;h&quot;
+b // &quot;e&quot;
+c // &quot;l&quot;
+d // &quot;l&quot;
+e // &quot;o&quot;
+</code></pre></div><p>类似数组的对象都有一个 <strong>length</strong> 属性，因此还可以对这个属性解构赋值。</p> <div class="language- extra-class"><pre class="language-text"><code>let {length : len} = 'hello';
+len // 5
+</code></pre></div><hr> <br> <h1 id="_4-数值和布尔值的解构赋值"><a href="#_4-数值和布尔值的解构赋值" class="header-anchor">#</a> 4. 数值和布尔值的解构赋值</h1> <p>解构赋值时，如果等号右边是数值和布尔值，则会先转为对象。</p> <div class="language- extra-class"><pre class="language-text"><code>let {toString: s} = 123;
+s === Number.prototype.toString // true
+
+let {toString: s} = true;
+s === Boolean.prototype.toString // true
+</code></pre></div><p>上面代码中，数值和布尔值的包装对象都有 <strong>toString</strong> 属性。因此变量 <strong>s</strong> 都能取到值。</p> <p>解构赋值的规则是。只要等号右边的值不是对象或数组，就先将其转为对象。由于 <strong>undefined</strong> 和 <strong>null</strong> 无法转为对象，所以对他们进行结构赋值都会报错</p> <div class="language- extra-class"><pre class="language-text"><code>let { prop: x } = undefined; // TypeError
+let { prop: y } = null; // TypeError
+</code></pre></div><p>如果解构模式是嵌套的对象，而且子对象所在的父属性不存在，那么将会报错。</p> <hr> <br> <h1 id="_5-函数参数的解构赋值"><a href="#_5-函数参数的解构赋值" class="header-anchor">#</a> 5. 函数参数的解构赋值</h1> <p>函数的参数也可以使用解构赋值</p> <div class="language- extra-class"><pre class="language-text"><code>function add([x,y]) {
+    return x + y;
+}
+
+add([1,2])
+</code></pre></div><p>上面代码中，函数 <strong>add</strong> 的参数表面上是一个数组，但在传入参数的那一刻，数组参数就被解构成变量 <strong>x</strong> 和 <strong>y</strong>。对于函数内部的diam来说，他们能感受到的参数就是 <strong>x</strong> 和 <strong>y</strong>。</p> <p>下面是另一个例子</p> <div class="language- extra-class"><pre class="language-text"><code>[[1, 2], [3, 4]].map(([a,b]) =&gt; a + b);
+// [3, 7]
+</code></pre></div><p>函数参数的解构也可以使用默认值。</p> <div class="language- extra-class"><pre class="language-text"><code>function move({ x = 0, y = 0} = {}) {
+    return [x, y];
+}
+
+move({x: 3, y: 8}); // [3, 8]
+move({x: 3}); // [3, 0]
+move({}); // [0, 0]
+move(); // [0, 0]
+</code></pre></div><p>上面代码中，函数 <strong>move</strong> 的参数是一个对象，通过对这个对象进行解构，通过对这个对象进行解构，得到变量 <strong>x</strong> 和 <strong>y</strong> 的值，如果解构失败，<strong>x</strong> 和 <strong>y</strong> 等于默认值。</p> <p>注意， 下面写法会得到不一样的结果</p> <div class="language- extra-class"><pre class="language-text"><code>function move({x, y} = { x: 0, y: 0 }) {
+  return [x, y];
+}
+
+move({x: 3, y: 8}); // [3, 8]
+move({x: 3}); // [3, undefined]
+move({}); // [undefined, undefined]
+move(); // [0, 0]
+</code></pre></div><p>上面的代码是为函数 <strong>move</strong> 的参数指定默认值，而不是为变量 <strong>x</strong> 和 <strong>y</strong> 指定默认值，所以会得到前一种写法不同的结果。</p> <p><strong>undefined</strong> 就会触发函数参数的默认值</p> <div class="language- extra-class"><pre class="language-text"><code>[1, undefined, 3].map((x = 'yes') =&gt; x);
+// [ 1, 'yes', 3 ]
+</code></pre></div><hr> <br> <h1 id="_6-圆括号问题"><a href="#_6-圆括号问题" class="header-anchor">#</a> 6. 圆括号问题</h1> <p>解构赋值虽然很方便，但是解析起来并不容易。对于编译器来说，一个式子到底是模式、还是表达式，没有办法从一开始就知道，必须解析到（或解析不到）等号才能知道。</p> <p>由此带来的问题是，如果模式中出现圆括号怎么处理。ES6的规则是，只要有可能导致解构的歧义，就不得使用圆括号。</p> <p>但是这条规则实际上不那么容易辨别，处理起来相当麻烦。因此，建议只要有可能，就不要在模式中放置圆括号。</p> <h2 id="不能使用圆括号的情况"><a href="#不能使用圆括号的情况" class="header-anchor">#</a> 不能使用圆括号的情况</h2> <p>以下三种解构赋值不得使用圆括号。</p> <p>（1） 变量声明语句</p> <div class="language- extra-class"><pre class="language-text"><code>// 全部报错
+let [(a)] = [1];
+
+let {x: (c)} = {};
+let ({x: c}) = {};
+let {(x: c)} = {};
+let {(x): c} = {};
+
+let { o: ({ p: p }) } = { o: { p: 2 } };
+</code></pre></div><p>以上 6 个语句都会报错，因为它们都是变量声明语句，模式不能使用圆括号。</p> <br> <br>
+（2） 函数参数
+函数参数也属于变量声明，因此不能带有圆括号。
+<div class="language- extra-class"><pre class="language-text"><code>// 报错
+function f([(z)]) { return z; }
+// 报错
+function f([z,(x)]) { return x; }
+</code></pre></div><br> <br> <p>（3） 赋值语句的模式</p> <div class="language- extra-class"><pre class="language-text"><code>// 全部报错
+({ p: a }) = { p: 42 };
+([a]) = [5];
+</code></pre></div><p>上面代码将整个模式放在圆括号之中，导致报错
+<br> <br></p> <div class="language- extra-class"><pre class="language-text"><code>// 报错
+[({p: a}), {x: c}] = [{}, {}];
+</code></pre></div><p>上面代码将一部分模式放在圆括号之中，导致报错</p> <h2 id="可以使用圆括号的情况"><a href="#可以使用圆括号的情况" class="header-anchor">#</a> 可以使用圆括号的情况</h2> <p>可以使用圆括号的情况只有一种：赋值语句的非模式部分，可以使用圆括号。</p> <div class="language- extra-class"><pre class="language-text"><code>[(b)] = [3]; // 正确
+({ p: (d) } = {}); // 正确
+[(parseInt.prop)] = [3]; // 正确
+</code></pre></div><p>上面三行语句都可以正确执行，因为首先它们都是赋值语句，而不是声明语句；其次它们的圆括号都不属于模式的一部分。第一行语句中，模式是取数组的第一个成员，与圆括号无关;第二行语句中，模式是 <strong>p</strong>，而不是 <strong>d</strong>；第三行语句与第一行语句的性质一致。</p> <h1 id="_7-用途"><a href="#_7-用途" class="header-anchor">#</a> 7. 用途</h1> <p>变量的解构赋值用途很多。</p> <h4 id="_1-交换变量的值"><a href="#_1-交换变量的值" class="header-anchor">#</a> （1）交换变量的值</h4> <div class="language- extra-class"><pre class="language-text"><code>let x = 1;
+let y = 2;
+
+[x, y] = [y, x];
+</code></pre></div><p>上面代码交换 <strong>x</strong> 和 <strong>y</strong> 的值，这样的写法不仅简洁，而且易读，语义非常清晰。</p> <h4 id="_2-从函数返回多个值"><a href="#_2-从函数返回多个值" class="header-anchor">#</a> （2）从函数返回多个值</h4> <p>函数只能返回一个值，如果要返回多个值，只能将他们放在数组或对象里返回。有了解构赋值，取出这些值就非常方便。</p> <div class="language- extra-class"><pre class="language-text"><code>// 返回一个数组
+
+function example() {
+    return [1, 2, 3];
+}
+let [a, b, c] = example()
+
+// 返回一个对象
+function example() {
+    return {
+        foo: 1,
+        bar: 2
+    };
+}
+let {foo, bar} = example()
+</code></pre></div><h4 id="_3-函数参数的定义"><a href="#_3-函数参数的定义" class="header-anchor">#</a> （3）函数参数的定义</h4> <p>解构赋值可以方便地将一组参数与变量名对应起来。</p> <div class="language- extra-class"><pre class="language-text"><code>// 参数是一组有次序的值
+function f([x, y, z]) { ... }
+f([1, 2, 3])
+
+// 参数是一组无次序的值
+function f({x, y, z}) { ... }
+f({z: 3, y: 2, x: 1});
+</code></pre></div><h4 id="_4-提取json数据"><a href="#_4-提取json数据" class="header-anchor">#</a> （4）提取JSON数据</h4> <p>解构赋值对提取JSON对象中的数据，尤其有用</p> <div class="language- extra-class"><pre class="language-text"><code>let jsonData = {
+   id: 42,
+   status: 'OK',
+   data: [867, 5309]
+};
+
+let {id, status, data: number} = jsonData
+
+console.log(id, status, number);
+// 42, &quot;OK&quot;, [867, 5309]
+</code></pre></div><p>上面代码可以快速提取JSON数据的值。</p> <h4 id="_5-函数参数的默认值"><a href="#_5-函数参数的默认值" class="header-anchor">#</a> （5）函数参数的默认值</h4> <div class="language- extra-class"><pre class="language-text"><code>jQuery.ajax = function (url, {
+    async = true,
+    beforeSend = function () {},
+    cache = true,
+    complete = function () {},
+    crossDomain = false,
+    global = true,
+    // ... more config
+} = {}) {
+    // ... do stuff  
+};
+</code></pre></div><p>指定参数的默认值，就避免了再函数体内部在写 <code>var foo = config.foo || 'default foo'</code> ; 这样的语句。</p> <h4 id="_6-遍历map结构"><a href="#_6-遍历map结构" class="header-anchor">#</a> （6）遍历Map结构</h4> <p>任何部署了Iterator接口的对象，都可以用 <strong>for...of</strong> 循环遍历。Map结构原生支持 Iterator 接口，配合变量的解构赋值，获取键名和键值就非常方便。</p> <div class="language- extra-class"><pre class="language-text"><code>const map = new Map();
+map.set('first', 'hello');
+map.set('second', 'world');
+
+for (let [key, value] of map) {
+    console.log(key + &quot; is &quot; + value);
+}
+
+// first is hello
+// second is world
+
+</code></pre></div><p>如果只想获取键名，或者只想获取键值，可以写成下面这样。</p> <div class="language- extra-class"><pre class="language-text"><code>// 获取键名
+for (let [key] of map) {
+  // ...
+}
+
+// 获取键值
+for (let [,value] of map) {
+  // ...
+}
+</code></pre></div><h4 id="_7-输入模块的指定方法"><a href="#_7-输入模块的指定方法" class="header-anchor">#</a> （7）输入模块的指定方法</h4> <p>加载模块时，往往需要指定输入那些方法。解构赋值使得语句非常清晰。</p> <div class="language- extra-class"><pre class="language-text"><code>const { SourceMapConsumer, SourceNode } = require(&quot;source-map&quot;);
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript1.html" class="prev">
+        1. let 和 const 命令
+      </a></span> <span class="next"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript3.html">
+        3. 字符串的扩展
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/iTNpotesBlog.github.io/assets/js/app.3fa40ee6.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/2.9583a22b.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/58.1f070a48.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>路由详解（一）——基础 | Alfred个人主页</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/iTNpotesBlog.github.io/image/hero.png">
+    <meta name="description" content="Alfred个人博客">
+    
+    <link rel="preload" href="/iTNpotesBlog.github.io/assets/css/0.styles.c4297c3b.css" as="style"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/app.adf88209.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/2.9988f9de.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/174.9d11552f.js" as="script"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/10.f46ae03e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/100.3b1485fc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/101.c7e7c363.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/102.2702d094.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/103.aa78fdbd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/104.d228600f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/105.4b2d5331.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/106.7d9123a0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/107.973f59de.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/108.5ee4b001.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/109.bec66f55.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/11.2c6b97ad.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/110.aea621d8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/111.8310c8f8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/112.1ad50fed.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/113.69f471ff.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/114.d9ca6dae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/115.730b6b91.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/116.6b3fac2a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/117.870d5870.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/118.1301b0c1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/119.24df945a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/12.459c441b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/120.8afeccac.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/121.e33663b1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/122.4395b705.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/123.e1dcad2c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/124.fbb8ccd7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/125.bb320edb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/126.ec08d7c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/127.af78ee83.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/128.20749767.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/129.d793d07d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/13.87f57fa7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/130.d57bdada.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/131.b9c7673d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/132.e348cf25.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/133.9c6ee168.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/134.cf41d56a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/135.a097a189.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/136.03f4d73c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/137.9dc2fafd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/138.2a9ee388.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/139.5d4eaa21.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/14.9a823fdf.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/140.01e8cbf7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/141.b78fa228.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/142.c8e38b22.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/143.867f330f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/144.83423c72.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/145.910fdd66.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/146.84531909.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/147.daf7952b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/148.7f0e2b86.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/149.0b9cf3a0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/15.b859687c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/150.58db92ad.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/151.8796d995.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/152.3178991b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/153.8129c797.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/154.cc600356.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/155.b9f61be6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/156.ed9365b6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/157.dd428dd4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/158.241a822f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/159.254742aa.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/16.358daa38.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/160.443f3934.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/161.c6fec0b8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/162.dfc3d689.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/163.6ebbb7e4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/164.7f0517d6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/165.b04bf87e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/166.0ebfefa6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/167.a71047e8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/168.26614bb6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/169.8664b1f9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/17.4b47ea89.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/170.bbdc97e5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/171.b8d3c603.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/172.b55f880b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/173.405791fe.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/175.1433717a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/176.bc999383.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/177.d3cb2563.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/178.52489c1e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/179.71fc20c8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/18.b68e3487.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/180.2b77b1b5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/181.0e314359.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/182.b04512c7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/183.c2300002.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/184.5519654d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/185.c885a96b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/186.e5a1ee1c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/187.b4ced278.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/188.4d58cc74.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/189.16d5368f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/19.8d704ae6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/20.5ad5afa3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/21.559c8400.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/22.2d2b0843.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/23.2fc390da.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/24.8c1712d3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/25.24e3fc1c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/26.821ae23b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/27.de800dc3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/28.2ee7239d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/29.2bd2bcba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/3.b3e43935.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/30.eb14bf1d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/31.b9081344.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/32.c915ea49.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/33.2ebf91a8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/34.731784eb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/35.fb881d82.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/36.624bac62.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/37.6976681f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/38.18af219a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/39.a8b539dc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/4.358e4147.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/40.324ef394.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/41.a368f027.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/42.6c0bfe84.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/43.0f7ed632.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/44.6f768146.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/45.c25d23ae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/46.f295fd46.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/47.21cd97d9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/48.07d5bcc1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/49.d89aaad9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/5.7d96d3f8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/50.3c09a63d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/51.2bbf6554.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/52.9219fe24.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/53.0b871372.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/54.bbf362bd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/55.fc1f2b3c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/56.e00bee54.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/57.d4e0b48b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/58.61087ca3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/59.4c57d653.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/6.9b4d2796.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/60.da4c7721.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/61.a829a3a4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/62.823a7157.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/63.e21b77f2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/64.d14d4cae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/65.a9c0de9d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/66.ec0c0c3e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/67.a83f19ba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/68.f69ebb6a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/69.6b1576d1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/7.c95f95d2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/70.6d4b4735.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/71.1ffff124.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/72.efb018ba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/73.e2841182.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/74.eb44b2b8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/75.41f88a99.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/76.1b808abe.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/77.8e8c781d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/78.ef6ec6c1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/79.b865fe51.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/8.2095e5c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/80.4d10ec25.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/81.7d58c638.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/82.72aaf3c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/83.7a628029.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/84.a8d9d835.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/85.00d98d0e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/86.fca36c28.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/87.c617078d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/88.f03e51fb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/89.5673327a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/9.9dda7952.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/90.c194997b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/91.5043bff2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/92.4081c3fc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/93.f33ed6ef.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/94.7ff2ce8f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/95.fbd2616a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/96.9cda6bec.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/97.9f0b779b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/98.4742a843.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/99.6a976b86.js">
+    <link rel="stylesheet" href="/iTNpotesBlog.github.io/assets/css/0.styles.c4297c3b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/iTNpotesBlog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">Alfred个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link router-link-active">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link router-link-active">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html" class="sidebar-link">使用Vue-cli3.0创建一个项目</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html" aria-current="page" class="active sidebar-link">路由详解（一）——基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#router-link和router-view组件" class="sidebar-link">router-link和router-view组件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#router文件夹-index-js解析" class="sidebar-link">router文件夹 -&gt; index.js解析</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#app-vue里面示例分析" class="sidebar-link">App.vue里面示例分析</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#router文件夹-router-js解析" class="sidebar-link">router文件夹 -&gt; router.js解析</a></li></ul></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#路由配置-动态路由" class="sidebar-link">路由配置-动态路由</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#路由配置-嵌套路由" class="sidebar-link">路由配置-嵌套路由</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#路由配置-命名路由" class="sidebar-link">路由配置-命名路由</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#路由配置-命名视图" class="sidebar-link">路由配置-命名视图</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#重定向" class="sidebar-link">重定向</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#别名" class="sidebar-link">别名</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#js操作路由" class="sidebar-link">JS操作路由</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#返回上一页" class="sidebar-link">返回上一页</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#跳转到指定页面-push" class="sidebar-link">跳转到指定页面 push</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html#替换到指定页面-replace" class="sidebar-link">替换到指定页面 replace</a></li></ul></li></ul></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue3.html" class="sidebar-link">路由详解（二）—— 进阶</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue4.html" class="sidebar-link">状态管理</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue5.html" class="sidebar-link">Hello Vue5</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue6.html" class="sidebar-link">Hello Vue6</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue7.html" class="sidebar-link">Hello Vue7</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue8.html" class="sidebar-link">Ajax请求</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue9.html" class="sidebar-link">Hello Vue9</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue10.html" class="sidebar-link">Hello Vue10</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue11.html" class="sidebar-link">Hello Vue11</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue12.html" class="sidebar-link">Hello Vue12</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue13.html" class="sidebar-link">Hello Vue13</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue14.html" class="sidebar-link">Hello Vue14</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue15.html" class="sidebar-link">Hello Vue15</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue16.html" class="sidebar-link">Hello Vue16</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue17.html" class="sidebar-link">Hello Vue17</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue18.html" class="sidebar-link">Hello Vue18</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue19.html" class="sidebar-link">Hello Vue19</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue20.html" class="sidebar-link">Hello Vue20</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue21.html" class="sidebar-link">Hello Vue21</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue22.html" class="sidebar-link">Hello Vue22</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue23.html" class="sidebar-link">Hello Vue23</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue24.html" class="sidebar-link">Hello Vue24</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue25.html" class="sidebar-link">Hello Vue25</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue26.html" class="sidebar-link">Hello Vue26</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="路由详解-一-基础"><a href="#路由详解-一-基础" class="header-anchor">#</a> 路由详解（一）——基础</h1> <blockquote><p><strong>课程主要内容</strong><br>
+1、 router-link 和 router-view组件 <br>
+2、 路由配置 <br>   a. 动态路由<br>   b. 嵌套路由<br>    c. 命名路由 <br>   d. 命名视图 <br>
+3、 JS操作路由 <br>
+4、 重定向和别名 <br></p></blockquote> <h2 id="router-link和router-view组件"><a href="#router-link和router-view组件" class="header-anchor">#</a> router-link和router-view组件</h2> <h3 id="router文件夹-index-js解析"><a href="#router文件夹-index-js解析" class="header-anchor">#</a> router文件夹 -&gt; index.js解析</h3> <p>index.js里面创建的是路由实例，在router.js里面，放置的是路由列表</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Router from 'vue-router'
+&lt;!--引进路由列表--&gt;
+import routes from './router'
+&lt;!--Router插件要想引进来的话需要用Vue.use方法加载进来--&gt;
+Vue.use(Router)
+
+export default new Router({
+  routes: routes
+})
+
+</code></pre></div><h3 id="app-vue里面示例分析"><a href="#app-vue里面示例分析" class="header-anchor">#</a> App.vue里面示例分析</h3> <p>在App.vue示例里面，有两个router-link组件，一个router-view组件。
+router-link这个组件，它其实是封装了一个 <strong>a</strong> 标签，也就是链接标签，里面有一个重要属性 <strong>to</strong> 它指定的值是一个路径，在 router-link 中间你可以包含一些内容。</p> <p>router-view组件是一个视图渲染组件，通过 router-link 跳转到的页面加载的组件都会在 router-view 这个地方渲染</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;div id=&quot;nav&quot;&gt;
+      &lt;router-link to=&quot;/&quot;&gt;Home&lt;/router-link&gt; |
+      &lt;router-link to=&quot;/about&quot;&gt;About&lt;/router-link&gt;
+    &lt;/div&gt;
+    &lt;router-view/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+</code></pre></div><p>对于router-link 定义的路径，对应的要渲染的组件在 <strong>router文件夹</strong> 的 <strong>router.js</strong> 路由列表里面定义</p> <h3 id="router文件夹-router-js解析"><a href="#router文件夹-router-js解析" class="header-anchor">#</a> router文件夹 -&gt; router.js解析</h3> <p>首先，路由列表是一个数组，里面包含着路由对象，一个基本的路由对象必须包含两个属性，一个是 <strong>path</strong> 一个是 <strong>component</strong>。 <br> <strong>path</strong> 指代的是路径，也就是你在url里面输入的路径。<br> <strong>component</strong> 指代的是组件，也就是你 path 里面的路径要对应的那个组件。</p> <p>第一个路由对象：我们引入了一个 <strong>Home</strong> 组件 @ 符号指代的是 src 路径。在vue.config.js里面配置的。
+第二个路由对象：path路径是 '/about' 。component 里面跟第一个路由对象写法不一样，我们看注释可以看出，这样写法可以起到一个懒加载（lazy-loaded）的作用，就是说当我们访问到这个页面的时候，他才会加载这个页面组件，这样起到一个优化的作用。</p> <div class="language- extra-class"><pre class="language-text"><code>import Home from '@/views/Home.vue'
+export default [
+  {
+    path: '/',
+    name: 'home',
+    component: Home
+  },
+  {
+    path: '/about',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =&gt; import(/* webpackChunkName: &quot;about&quot; */ '@/views/About.vue')
+  }
+]
+</code></pre></div><h2 id="路由配置-动态路由"><a href="#路由配置-动态路由" class="header-anchor">#</a> 路由配置-动态路由</h2> <p>首先我们来创建一个路由对象， (:name) 这是一个动态路由参数,然后创建一个argu.vue页面组件，在argu.vue页面显示一下 <strong>$route.params.name</strong></p> <div class="language- extra-class"><pre class="language-text"><code>router.js:
+{
+    path: '/argu/:name',
+    component: () =&gt; import('@/views/argu.vue')
+}
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>argu.vue:
+&lt;template&gt;
+  &lt;div&gt;{{ $route.params.name }}&lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  //
+}
+&lt;/script&gt;
+</code></pre></div><p>当你在浏览器中输入 http://localhost:8080/#/argu/lision 时，页面会显示 argu 后面的值，当改变 lision 的时候，页面上也会随之改变。</p> <p><img src="195BBB0659264445AAEB74349A8CD59E" alt="image"></p> <p><strong>$route</strong>：代表的是当前加载页面的路由对象，它里面包含一个 <strong>params</strong> 参数，<strong>params</strong> 也是一个对象，里面包含一个叫 <strong>name</strong> 的值，name的值就是动态路由上 “:name”, 无论name是什么，匹配到的都是 ** path: '/argu/:name'这个对应的路由对象** 加载的都是 <strong>argu.vue</strong> 文件。这样就能起到一个组件的复用，只需要传不同的参数，呈现同一个页面可以处理不同的逻辑。</p> <h2 id="路由配置-嵌套路由"><a href="#路由配置-嵌套路由" class="header-anchor">#</a> 路由配置-嵌套路由</h2> <p>在实际开发过程中我们经常用到多层嵌套的组件，那么这些嵌套的组件可以通过嵌套路由进行渲染。</p> <p>router.js:</p> <div class="language- extra-class"><pre class="language-text"><code>// 嵌套路由
+  {
+    path: '/parent',
+    component: () =&gt; import('@/views/parent.vue'),
+    // children属性是一个数组，里面包含嵌套在parent组件里面的子集页面
+    children: [
+      {
+        // 子集的path里面是不需要斜线的,只有父级的path才需要写 加 &quot;/&quot;。作为嵌套路由，他会自动补全子集里面的 &quot;/&quot; 所以path的值直接就是 'child'
+        path: 'child',
+        component: () =&gt; import('@/views/child.vue')
+      }
+    ]
+  }
+</code></pre></div><p>parent.vue</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    I am parent
+    &lt;!-- 用来渲染路由视图 --&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  //
+}
+&lt;/script&gt;
+</code></pre></div><p>child.vue</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    I am child
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  //
+}
+&lt;/script&gt;
+
+</code></pre></div><p>代码运行显示效果图：当路径为 http://localhost:8080/#/parent/child
+<img src="A31545F6B3F64310B9C1C3D3D8B554D7" alt="image"></p> <h2 id="路由配置-命名路由"><a href="#路由配置-命名路由" class="header-anchor">#</a> 路由配置-命名路由</h2> <p>在路由对象中，还有一个属性，那就是 name 属性。当你给路由对象设置一个name属性，也就是给这个路由对象命名。在 <strong>App.vue</strong> 中，有两个 <strong>router-link</strong>， 通过 <strong>to</strong> 这个属性，给他设置一个路径，点击这个地方，就会跳转到对应的路径，我们使用命名路由的时候，将路由对象的 <strong>name</strong> 值给 <strong>router-link</strong> 里面的 <strong>to</strong> 属性的时候。我们就可以通过 <strong>name</strong> 值来进行跳转。</p> <p>router.js</p> <div class="language- extra-class"><pre class="language-text"><code>  {
+    path: '/',
+    name: 'home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'about',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =&gt; import(/* webpackChunkName: &quot;about&quot; */ '@/views/About.vue')
+  },
+</code></pre></div><p>App.vue</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;div id=&quot;nav&quot;&gt;
+      &lt;router-link to=&quot;/&quot;&gt;Home&lt;/router-link&gt; |
+      &lt;router-link to=&quot;/about&quot;&gt;About&lt;/router-link&gt;
+    &lt;/div&gt;
+    &lt;router-view/&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><p>首先要给 <strong>to</strong> 传入一个对象，如果要是对象的话，那么 router-link 里面的 to 属性就不能像以前那样写了,修改如下：</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;router-link v-bind:to=&quot;{name: 'about'}&quot;&gt;About&lt;/router-link&gt;
+或
+&lt;router-link :to=&quot;{name: 'about'}&quot;&gt;About&lt;/router-link&gt;
+</code></pre></div><p>运行效果入下：</p> <p>http://localhost:8080/#/</p> <p><img src="29BE7C5BB2744CF8B2F4CDF0A59FFC2B" alt="image"></p> <p>点击 about 按钮之后</p> <p>http://localhost:8080/#/about
+<img src="0CF23429107E4559AF90F2A60983F168" alt="image"></p> <p>在上文App.vue中，router-link 是双标签， router-view 是单标签。那是因为 router-link 里面有东西，我们需要在它中间放一些东西。如果组件中间不需要放东西的时候，我们也可以将 router-link 写成单标签。</p> <h2 id="路由配置-命名视图"><a href="#路由配置-命名视图" class="header-anchor">#</a> 路由配置-命名视图</h2> <p>在 App.vue 中只有一个 router-view 这么一个标签，那么如果我们想在同一个页面上显示多个视图，而且让每个视图显示在指定的位置。</p> <p>在App.vue中加入两个 router-view</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;div id=&quot;nav&quot;&gt;
+      &lt;router-link :to=&quot;{name: 'home'}&quot;&gt;Home&lt;/router-link&gt; |
+      &lt;router-link v-bind:to=&quot;{name: 'about'}&quot;&gt;About&lt;/router-link&gt;
+    &lt;/div&gt;
+    &lt;router-view/&gt;
+    &lt;router-view name=&quot;email&quot; /&gt;
+    &lt;router-view name=&quot;tel&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><p>==使用的是特别要注意的是，name为router列表里面的name的值，name如果使用path的话，就会出错==</p> <p>router.js</p> <div class="language- extra-class"><pre class="language-text"><code> // 命名视图
+  {
+    path: '/named_view',
+    // 这个是 components 之前的都是 component 没有 s。 加上 s 之后说明我们要加载多个组件
+    components: {
+      // 如果在之前的 app.vue 中的 router-view 没有命名的话，那么就加载 default 对应的组件的
+      default: () =&gt; import('@/views/child.vue'),
+      email: () =&gt; import('@/views/email.vue'),
+      tel: () =&gt; import('@/views/tel.vue')
+    }
+  }
+</code></pre></div><p>email.vue</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    email: 991538766@qq.com
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  //
+}
+&lt;/script&gt;
+</code></pre></div><p>tel.vue</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    tel: 16855555555
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  //
+}
+&lt;/script&gt;
+</code></pre></div><p>运行效果图如下：
+<img src="44ECE0E999B64BC2AB0A043BC0CF8848" alt="image"></p> <p><img src="936CC00B608F499091283B501DB1BE3A" alt="image"></p> <h2 id="重定向"><a href="#重定向" class="header-anchor">#</a> 重定向</h2> <p>重定向能够帮我们把当前要访问的 url 定向到 另一个 url。比如：</p> <div class="language- extra-class"><pre class="language-text"><code>// 重定向
+  {
+    // 当我们要访问 main 这个路径的时候，他会重定向到 &quot;/&quot; 也就是 home 页
+    path: '/main1',
+    redirect: '/'
+  },
+  {
+    // 当我们要访问 main 这个路径的时候，他会重定向到 name 为 home 的页面
+    path: '/main2',
+    redirect: {
+      name: 'home'
+    }
+  },
+  // 还可以向其中插入一个方法函数
+  {
+    // 当我们要访问 main 这个路径的时候，他会重定向到 name 为 home 的页面
+    path: '/main3',
+    redirect: to =&gt; {
+      console.log(to)
+      return {
+        name: 'home'
+      }
+      // 或者我们还可以返回一个路径 &quot;/&quot; 最后的显示效果都是一样的
+      return '/'
+    }
+  }
+  // 如果使用 ES6 里面的简写，那么也是可以的
+  {
+    // 当我们要访问 main 这个路径的时候，他会重定向到 name 为 home 的页面
+    path: '/main3',
+    redirect: to =&gt; &quot;/&quot;
+</code></pre></div><p>http://localhost:8080/#/main3</p> <p><img src="BD10F60DF88B4275A83CD213D972C15B" alt="image"></p> <h2 id="别名"><a href="#别名" class="header-anchor">#</a> 别名</h2> <p>当我们访问一个路径的时候，可以给他定义一个别名，生成另外一个路径，访问路径的时候与访问别名的时候效果相同。
+router.js 我们给 home路由对象定义一个别名</p> <div class="language- extra-class"><pre class="language-text"><code>  {
+    path: '/',
+    alias: '/home_page',
+    name: 'home',
+    component: Home
+  },
+</code></pre></div><p>当我们访问首页的时候</p> <p>http://localhost:8080/#/ 与 http://localhost:8080/#/home_page 显示相同。</p> <h2 id="js操作路由"><a href="#js操作路由" class="header-anchor">#</a> JS操作路由</h2> <p>编程式的导航，通过js控制页面的跳转，返回</p> <h3 id="返回上一页"><a href="#返回上一页" class="header-anchor">#</a> 返回上一页</h3> <p>我们使用编程时导航的时候，需要用到一个路由实例。 路由实例就是 this.$router<br>
+路由实例有很多的方法，我们现在要返回上一页。我们可以用 this.$router.go(-1)。 返回后面的一页<br>
+如果 this.$router.go(1) 那么就是前进到下一页。<br>
+除了可以用这种方式可以后退的，我们还可以用 this.$router.back()</p> <h3 id="跳转到指定页面-push"><a href="#跳转到指定页面-push" class="header-anchor">#</a> 跳转到指定页面 push</h3> <p>跳转到指定页面，要使用路由实例中的 <strong>push</strong> 方法</p> <h3 id="替换到指定页面-replace"><a href="#替换到指定页面-replace" class="header-anchor">#</a> 替换到指定页面 replace</h3> <p>push和replace有什么区别呢？当我们使用push的时候，会在我们的浏览历史里加入一个浏览记录，当我们回退的时候就能回退到之前的页面；如果用replace呢？他就会把当前的浏览历史，替换成parent这个页面，如果这时候点击回退的时候，会回退到 parent 页面，不会回退到之前的页面。</p> <p>当我在push的时候添加了一些其他的信息，当我们点击跳转的时候，顶部url变成了 http://localhost:8080/#/parent?name=Alfred 多了一个参数</p> <p><img src="C72D3B2BA8EF471ABCEDE92C27C24DAA" alt="image"></p> <p>我们的argu.vue中有    当我们将跳转到parent页面转变成跳转到 argu页面之后</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;{{ $route.params.name }}&lt;/div&gt;
+&lt;/template&gt;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>this.$router.push({
+  name: 'argu',
+  // 同时我们也可以在对象里面添加一些信息，比如：
+  params: {
+    name: &quot;Alfred&quot;
+  }
+})
+</code></pre></div><p>顶部的地址栏变成了 http://localhost:8080/#/argu/Alfred 我们可以看到，匹配到了该页面，而且还带了一个参数。</p> <p><img src="2FEC0684AC77495F9F2B660794DE6F9B" alt="image"></p> <p>如果我们使用 ES6 的模板语法：</p> <div class="language- extra-class"><pre class="language-text"><code>const name = 'Alfred'
+this.$router.push({
+  path: `/argu/${name}`
+})
+</code></pre></div><p>这样效果也是可以的，我们需要注意一下 path 的写法。path后面定义的params是无效的。</p> <p>Home.vue全部源码</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div class=&quot;home&quot;&gt;
+    &lt;img alt=&quot;Vue logo&quot; src=&quot;../assets/img/logo.png&quot;&gt;
+    &lt;HelloWorld msg=&quot;Welcome to Your Vue.js App&quot;/&gt;
+    &lt;button @click=&quot;handleClick('back')&quot;&gt;返回上一页&lt;/button&gt;
+    &lt;button @click=&quot;handleClick('push')&quot;&gt;跳转到parent&lt;/button&gt;
+    &lt;button @click=&quot;handleClick('replace')&quot;&gt;替换到parent&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+// @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue'
+
+export default {
+  name: 'home',
+  components: {
+    HelloWorld
+  },
+  methods: {
+    handleClick (type) {
+      // 我们使用编程时导航的时候，需要用到一个路由实例。 路由实例就是 this.$router
+      if (type === 'back') {
+        // 路由实例有很多的方法，我们现在要返回上一页。我们可以用 this.$router.go(-1)。 返回后面的一页
+        // 如果 this.$router.go(1) 那么就是前进到下一页。
+        // this.$router.go(-1)
+        // 除了可以用这种方式可以后退的，我们还可以用 this.$router.back()
+        this.$router.back()
+      } else if (type === 'push') {
+        // 通过路径的方式
+        // this.$router.push('/parent')
+        // 命名路由的方式
+        /*
+        this.$router.push({
+          name: 'parent',
+          // 同时我们也可以在对象里面添加一些信息，比如：
+          query: {
+            name: &quot;Alfred&quot;
+          }
+        })*/
+        /*
+        // 跳转到 argu 页面
+        this.$router.push({
+          name: 'argu',
+          // 同时我们也可以在对象里面添加一些信息，比如：
+          params: {
+            name: &quot;Alfred&quot;
+          }
+        })*/
+        // 使用 ES6 的模板语法
+        const name = 'Alfred'
+        this.$router.push({
+          path: `/argu/${name}`
+        })
+      } else if (type === 'replace') {
+        this.$router.replace({
+          name: 'parent'
+        })
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/iTNpotesBlog.github.io/notes/vue/vue1.html" class="prev">
+        使用Vue-cli3.0创建一个项目
+      </a></span> <span class="next"><a href="/iTNpotesBlog.github.io/notes/vue/vue3.html">
+        路由详解（二）—— 进阶
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/iTNpotesBlog.github.io/assets/js/app.adf88209.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/2.9988f9de.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/174.9d11552f.js" defer></script>
+  </body>
+</html>

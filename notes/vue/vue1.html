@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用Vue-cli3.0创建一个项目 | Alfred个人主页</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/iTNpotesBlog.github.io/image/hero.png">
+    <meta name="description" content="Alfred个人博客">
+    
+    <link rel="preload" href="/iTNpotesBlog.github.io/assets/css/0.styles.c4297c3b.css" as="style"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/app.adf88209.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/2.9988f9de.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/163.6ebbb7e4.js" as="script"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/10.f46ae03e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/100.3b1485fc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/101.c7e7c363.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/102.2702d094.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/103.aa78fdbd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/104.d228600f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/105.4b2d5331.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/106.7d9123a0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/107.973f59de.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/108.5ee4b001.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/109.bec66f55.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/11.2c6b97ad.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/110.aea621d8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/111.8310c8f8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/112.1ad50fed.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/113.69f471ff.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/114.d9ca6dae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/115.730b6b91.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/116.6b3fac2a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/117.870d5870.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/118.1301b0c1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/119.24df945a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/12.459c441b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/120.8afeccac.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/121.e33663b1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/122.4395b705.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/123.e1dcad2c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/124.fbb8ccd7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/125.bb320edb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/126.ec08d7c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/127.af78ee83.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/128.20749767.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/129.d793d07d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/13.87f57fa7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/130.d57bdada.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/131.b9c7673d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/132.e348cf25.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/133.9c6ee168.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/134.cf41d56a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/135.a097a189.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/136.03f4d73c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/137.9dc2fafd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/138.2a9ee388.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/139.5d4eaa21.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/14.9a823fdf.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/140.01e8cbf7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/141.b78fa228.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/142.c8e38b22.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/143.867f330f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/144.83423c72.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/145.910fdd66.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/146.84531909.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/147.daf7952b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/148.7f0e2b86.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/149.0b9cf3a0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/15.b859687c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/150.58db92ad.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/151.8796d995.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/152.3178991b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/153.8129c797.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/154.cc600356.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/155.b9f61be6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/156.ed9365b6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/157.dd428dd4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/158.241a822f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/159.254742aa.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/16.358daa38.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/160.443f3934.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/161.c6fec0b8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/162.dfc3d689.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/164.7f0517d6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/165.b04bf87e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/166.0ebfefa6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/167.a71047e8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/168.26614bb6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/169.8664b1f9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/17.4b47ea89.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/170.bbdc97e5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/171.b8d3c603.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/172.b55f880b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/173.405791fe.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/174.9d11552f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/175.1433717a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/176.bc999383.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/177.d3cb2563.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/178.52489c1e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/179.71fc20c8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/18.b68e3487.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/180.2b77b1b5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/181.0e314359.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/182.b04512c7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/183.c2300002.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/184.5519654d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/185.c885a96b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/186.e5a1ee1c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/187.b4ced278.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/188.4d58cc74.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/189.16d5368f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/19.8d704ae6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/20.5ad5afa3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/21.559c8400.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/22.2d2b0843.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/23.2fc390da.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/24.8c1712d3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/25.24e3fc1c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/26.821ae23b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/27.de800dc3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/28.2ee7239d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/29.2bd2bcba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/3.b3e43935.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/30.eb14bf1d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/31.b9081344.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/32.c915ea49.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/33.2ebf91a8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/34.731784eb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/35.fb881d82.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/36.624bac62.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/37.6976681f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/38.18af219a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/39.a8b539dc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/4.358e4147.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/40.324ef394.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/41.a368f027.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/42.6c0bfe84.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/43.0f7ed632.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/44.6f768146.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/45.c25d23ae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/46.f295fd46.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/47.21cd97d9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/48.07d5bcc1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/49.d89aaad9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/5.7d96d3f8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/50.3c09a63d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/51.2bbf6554.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/52.9219fe24.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/53.0b871372.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/54.bbf362bd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/55.fc1f2b3c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/56.e00bee54.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/57.d4e0b48b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/58.61087ca3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/59.4c57d653.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/6.9b4d2796.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/60.da4c7721.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/61.a829a3a4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/62.823a7157.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/63.e21b77f2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/64.d14d4cae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/65.a9c0de9d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/66.ec0c0c3e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/67.a83f19ba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/68.f69ebb6a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/69.6b1576d1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/7.c95f95d2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/70.6d4b4735.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/71.1ffff124.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/72.efb018ba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/73.e2841182.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/74.eb44b2b8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/75.41f88a99.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/76.1b808abe.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/77.8e8c781d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/78.ef6ec6c1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/79.b865fe51.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/8.2095e5c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/80.4d10ec25.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/81.7d58c638.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/82.72aaf3c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/83.7a628029.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/84.a8d9d835.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/85.00d98d0e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/86.fca36c28.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/87.c617078d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/88.f03e51fb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/89.5673327a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/9.9dda7952.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/90.c194997b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/91.5043bff2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/92.4081c3fc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/93.f33ed6ef.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/94.7ff2ce8f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/95.fbd2616a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/96.9cda6bec.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/97.9f0b779b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/98.4742a843.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/99.6a976b86.js">
+    <link rel="stylesheet" href="/iTNpotesBlog.github.io/assets/css/0.styles.c4297c3b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/iTNpotesBlog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">Alfred个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link router-link-active">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link router-link-active">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html" aria-current="page" class="active sidebar-link">使用Vue-cli3.0创建一个项目</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html#使用-vue-ui创建一个项目" class="sidebar-link">使用 Vue UI创建一个项目</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html#安装vue-cli3-0-打开vue-ui" class="sidebar-link">安装vue-cli3.0 打开vue ui</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html#用vue-ui创建一个新的项目" class="sidebar-link">用vue ui创建一个新的项目</a></li></ul></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html#项目结构目录整理-初始化文件添加" class="sidebar-link">项目结构目录整理，初始化文件添加</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html#目录及源码分析" class="sidebar-link">目录及源码分析</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html#添加的配置或文件" class="sidebar-link">添加的配置或文件</a></li></ul></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/vue/vue1.html#基本配置讲-跨域配置" class="sidebar-link">基本配置讲，跨域配置</a></li></ul></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html" class="sidebar-link">路由详解（一）——基础</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue3.html" class="sidebar-link">路由详解（二）—— 进阶</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue4.html" class="sidebar-link">状态管理</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue5.html" class="sidebar-link">Hello Vue5</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue6.html" class="sidebar-link">Hello Vue6</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue7.html" class="sidebar-link">Hello Vue7</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue8.html" class="sidebar-link">Ajax请求</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue9.html" class="sidebar-link">Hello Vue9</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue10.html" class="sidebar-link">Hello Vue10</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue11.html" class="sidebar-link">Hello Vue11</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue12.html" class="sidebar-link">Hello Vue12</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue13.html" class="sidebar-link">Hello Vue13</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue14.html" class="sidebar-link">Hello Vue14</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue15.html" class="sidebar-link">Hello Vue15</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue16.html" class="sidebar-link">Hello Vue16</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue17.html" class="sidebar-link">Hello Vue17</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue18.html" class="sidebar-link">Hello Vue18</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue19.html" class="sidebar-link">Hello Vue19</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue20.html" class="sidebar-link">Hello Vue20</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue21.html" class="sidebar-link">Hello Vue21</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue22.html" class="sidebar-link">Hello Vue22</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue23.html" class="sidebar-link">Hello Vue23</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue24.html" class="sidebar-link">Hello Vue24</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue25.html" class="sidebar-link">Hello Vue25</a></li><li><a href="/iTNpotesBlog.github.io/notes/vue/vue26.html" class="sidebar-link">Hello Vue26</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="使用vue-cli3-0创建一个项目"><a href="#使用vue-cli3-0创建一个项目" class="header-anchor">#</a> 使用Vue-cli3.0创建一个项目</h1> <blockquote><p><strong>课程主要内容</strong><br>
+1、 使用 <strong>Vue UI</strong> 创建、管理项目 <br>
+2、 项目结构目录整理 <br>
+3、 初始化文件添加 <br>
+4、 基本配置讲解 <br>
+5、 跨域配置 <br></p></blockquote> <p>vue-cli2.0 和 vue-cli3.0 有天壤之别，主要得益于webpack4的零配置特性，vue-cli3.0 创建一个项目，不再需要我们书写庞杂的 vue webpack 配置，基本可以实现什么都不需要配置，就启动，编译，打包我们的项目。</p> <h2 id="使用-vue-ui创建一个项目"><a href="#使用-vue-ui创建一个项目" class="header-anchor">#</a> 使用 Vue UI创建一个项目</h2> <p>Vue UI 是vue-cli提供的一个可视化的项目管理工具。</p> <h3 id="安装vue-cli3-0-打开vue-ui"><a href="#安装vue-cli3-0-打开vue-ui" class="header-anchor">#</a> 安装vue-cli3.0 打开vue ui</h3> <blockquote><p>npm install -g @vue/cli</p></blockquote> <p>等待安装成功之后，在命令行输入 <strong>vue ui</strong> 就会自动打开浏览器进入 vue ui页面</p> <blockquote><p>vue ui</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>$ vue ui
+🚀  Starting GUI...
+🌠  Ready on http://localhost:8000
+</code></pre></div><h3 id="用vue-ui创建一个新的项目"><a href="#用vue-ui创建一个新的项目" class="header-anchor">#</a> 用vue ui创建一个新的项目</h3> <h4 id="vue-ui-创建一个项目-详情"><a href="#vue-ui-创建一个项目-详情" class="header-anchor">#</a> vue ui 创建一个项目，详情</h4> <p>主要填写的是项目的主要信息，项目名称，包管理器等</p> <h4 id="vue-ui-创建一个项目-预设"><a href="#vue-ui-创建一个项目-预设" class="header-anchor">#</a> vue ui 创建一个项目，预设</h4> <p>预设就是一套定义好的插件和配置项，你也可以将自己的配置保存成预设，方便以后创建项目使用。（在课程中我们选择的是手动配置项目）</p> <h4 id="vue-ui-创建一个项目-功能"><a href="#vue-ui-创建一个项目-功能" class="header-anchor">#</a> vue ui 创建一个项目，功能</h4> <p>在项目创建之后，你仍然可以通过安装插件来增加功能。</p> <h5 id="插件babel"><a href="#插件babel" class="header-anchor">#</a> 插件Babel</h5> <p>Babel会将ES6,ES7,ES8,ES9的ES代码转换成ES3，ES4，ES5。能够支持低版本的浏览器。</p> <h5 id="插件typescript"><a href="#插件typescript" class="header-anchor">#</a> 插件TypeScript</h5> <p>添加TypeScript语言的支持</p> <h5 id="progressive-web-app-pwa-support-渐进式移动应用"><a href="#progressive-web-app-pwa-support-渐进式移动应用" class="header-anchor">#</a> Progressive Web App(PWA)Support（渐进式移动应用）</h5> <h5 id="router"><a href="#router" class="header-anchor">#</a> Router</h5> <h5 id="vuex"><a href="#vuex" class="header-anchor">#</a> VueX</h5> <h5 id="css-pre-processors-css预处理器"><a href="#css-pre-processors-css预处理器" class="header-anchor">#</a> CSS Pre-processors （CSS预处理器）</h5> <p>Sass和less</p> <h5 id="linter-formatter"><a href="#linter-formatter" class="header-anchor">#</a> Linter/Formatter</h5> <p>会在编译器里做一些代码的检测，固定书写风格</p> <h5 id="unit-testing"><a href="#unit-testing" class="header-anchor">#</a> Unit Testing</h5> <p>单元测试</p> <h5 id="e2e-testing"><a href="#e2e-testing" class="header-anchor">#</a> E2E Testing</h5> <p>端到端测试</p> <h5 id="使用配置文件"><a href="#使用配置文件" class="header-anchor">#</a> 使用配置文件</h5> <p>将插件的配置保存在各自的配置文件（如 '.babelrc'）中</p> <h4 id="vue-ui-创建一个项目-配置"><a href="#vue-ui-创建一个项目-配置" class="header-anchor">#</a> vue ui 创建一个项目，配置</h4> <h5 id="use-history-mode-for-router-requires-proper-server-setup-for-index-fallback-in-production"><a href="#use-history-mode-for-router-requires-proper-server-setup-for-index-fallback-in-production" class="header-anchor">#</a> Use history mode for router？（Requires proper server setup for index fallback in production）</h5> <h5 id="pick-a-css-pre-processor"><a href="#pick-a-css-pre-processor" class="header-anchor">#</a> Pick a CSS pre-processor</h5> <p>PostCSS，Autoprefixer and  CSS modules are supported by default。默认支持自动修复和css模块</p> <h5 id="pick-a-linter-formatter-config"><a href="#pick-a-linter-formatter-config" class="header-anchor">#</a> Pick a linter/formatter config</h5> <p>选择一个ESlint风格</p> <h5 id="pick-additional-lint-features"><a href="#pick-additional-lint-features" class="header-anchor">#</a> pick additional lint features：</h5> <p>Lint on save（在保存的时候，都检查代码）<br>
+Lint and fix on commit (在提交代码的时候，检查代码)<br>
+如果两个都不选择，那么就是关掉ESLint</p> <h4 id="vue-ui-创建一个项目-创建完成"><a href="#vue-ui-创建一个项目-创建完成" class="header-anchor">#</a> vue ui 创建一个项目，创建完成</h4> <p>创建完成之后，会自定创建该项目，并且自动运行npm install 安装依赖</p> <h2 id="项目结构目录整理-初始化文件添加"><a href="#项目结构目录整理-初始化文件添加" class="header-anchor">#</a> 项目结构目录整理，初始化文件添加</h2> <h3 id="目录及源码分析"><a href="#目录及源码分析" class="header-anchor">#</a> 目录及源码分析</h3> <h4 id="vue-config-js"><a href="#vue-config-js" class="header-anchor">#</a> vue.config.js:</h4> <div class="language- extra-class"><pre class="language-text"><code>module.exports = {
+    lintOnSave: false  // 在每次保存的时候是否使用ESlint检查代码
+}
+</code></pre></div><h4 id="package-json"><a href="#package-json" class="header-anchor">#</a> package.json</h4> <p>定义了一些项目的描述。比如说，项目的版本，项目的名称，项目运行的一些脚本和一些项目中的依赖；
+<strong>dependencies</strong>: 项目在打包后要用到的一些依赖
+<strong>devDependencies</strong>：项目在开发阶段用到的一些依赖</p> <h4 id="babel-config-js"><a href="#babel-config-js" class="header-anchor">#</a> babel.config.js</h4> <p>babel的配置文件</p> <h4 id="postcss-config-js"><a href="#postcss-config-js" class="header-anchor">#</a> postcss.config.js</h4> <p>这个是css自动补充一些兼容代码的配置</p> <h4 id="gitignore"><a href="#gitignore" class="header-anchor">#</a> .gitignore</h4> <p>这个是Git提交的忽略文件</p> <h4 id="eslintrc-js"><a href="#eslintrc-js" class="header-anchor">#</a> .eslintrc.js</h4> <p>这个是用来配置eslint规则的，如果想制定一些自己的规则可以在，rules 里面添加</p> <div class="language- extra-class"><pre class="language-text"><code>  rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+  },
+</code></pre></div><h4 id="public文件夹"><a href="#public文件夹" class="header-anchor">#</a> public文件夹</h4> <p>public文件夹，里面放的是公共文件，</p> <h5 id="public-index-html"><a href="#public-index-html" class="header-anchor">#</a> public -&gt; index.html</h5> <p>index.html 这个是个模板文件。那么webpack在运行和打包项目的时候，会使用这个html文件，生成最后的项目的index.html</p> <h5 id="public-favicon-ico"><a href="#public-favicon-ico" class="header-anchor">#</a> public -&gt; favicon.ico</h5> <p>这个是在标签栏上显示的小图标</p> <h4 id="src文件-项目的主文件"><a href="#src文件-项目的主文件" class="header-anchor">#</a> src文件，项目的主文件</h4> <h5 id="src-assets文件夹"><a href="#src-assets文件夹" class="header-anchor">#</a> src -&gt; assets文件夹</h5> <p>这个用来放置一些静态资源的，比如图片，图标字体文件，都可以放在这个里面</p> <h5 id="src-components文件夹-components-组件"><a href="#src-components文件夹-components-组件" class="header-anchor">#</a> src -&gt; components文件夹 components（组件）</h5> <p>我们从代码中抽离出一些可以复用的逻辑，抽里成一个组件，以便我们复用。</p> <h5 id="src-views文件夹"><a href="#src-views文件夹" class="header-anchor">#</a> src -&gt; views文件夹</h5> <p>将写的页面全都放在这个里面</p> <h5 id="src-app-vue"><a href="#src-app-vue" class="header-anchor">#</a> src -&gt; App.vue</h5> <p>这个是基础组件</p> <h5 id="src-main-js"><a href="#src-main-js" class="header-anchor">#</a> src -&gt; main.js</h5> <p>项目入口文件</p> <h5 id="src-router-js"><a href="#src-router-js" class="header-anchor">#</a> src -&gt; router.js</h5> <p>路由文件</p> <h5 id="src-store-js"><a href="#src-store-js" class="header-anchor">#</a> src -&gt; store.js</h5> <p>vuex，项目状态管理文件</p> <h3 id="添加的配置或文件"><a href="#添加的配置或文件" class="header-anchor">#</a> 添加的配置或文件</h3> <h4 id="添加-editorconfig"><a href="#添加-editorconfig" class="header-anchor">#</a> 添加 .editorconfig</h4> <p>使用vscode 的，可以添加一个编译器的文件，这个文件可以配置一些编译器的使用习惯</p> <div class="language- extra-class"><pre class="language-text"><code>root = true         // 让我们配置文件生效
+[*]                 // 应用于全部文件
+charset = utf-8     // 编码设置成utf-8
+indent_style = tab  // 缩进使用tab
+indent_size = 2     // 缩进的尺寸
+</code></pre></div><p>在vscode中，需要使用安装一个叫EditorConfig for VS Code</p> <h4 id="添加-src-api文件夹"><a href="#添加-src-api文件夹" class="header-anchor">#</a> 添加 src -&gt; api文件夹</h4> <p>api就是接口，你的一些项目的ajax请求可以写在这个里面，作为一个统一的管理</p> <h4 id="添加-src-assets文件夹-img文件夹"><a href="#添加-src-assets文件夹-img文件夹" class="header-anchor">#</a> 添加 src -&gt; assets文件夹 -&gt; img文件夹</h4> <p>这是对 assets文件夹进行整理，img文件里面放置图片</p> <h4 id="添加-src-assets文件夹-font文件夹"><a href="#添加-src-assets文件夹-font文件夹" class="header-anchor">#</a> 添加 src -&gt; assets文件夹 -&gt; font文件夹</h4> <p>这是对 assets文件夹进行整理，font文件里面放置图标字体，字体文件</p> <h4 id="添加-src-config文件夹-index-js"><a href="#添加-src-config文件夹-index-js" class="header-anchor">#</a> 添加 src -&gt; config文件夹 -&gt; index.js</h4> <p>项目中的一些配置放在config文件夹里面的index.js中。使用es6的模块系统，导出一个配置对象。</p> <div class="language- extra-class"><pre class="language-text"><code>export default {
+	//
+}
+</code></pre></div><p>设置好之后想在其他地方用到这个的时候，想要引入的话，需要在 <strong>store.js</strong> 中这样引入</p> <div class="language- extra-class"><pre class="language-text"><code>import config form './config'   // 路径只写到config，他会自动在config文件夹中找，index.js文件，引入配置对象。
+
+import config form './config/index'  // 如果这样写的话，会直接找到index.js文件，引入配置对象。
+</code></pre></div><h4 id="添加-src-directive文件夹"><a href="#添加-src-directive文件夹" class="header-anchor">#</a> 添加 src -&gt; directive文件夹</h4> <p>用来放置vue的自定义指令</p> <h4 id="添加-src-lib文件夹-util-js"><a href="#添加-src-lib文件夹-util-js" class="header-anchor">#</a> 添加 src -&gt; lib文件夹 -&gt; util.js</h4> <p>里面首先一个加util.js。可以将于业务结合的工具和方法</p> <h4 id="添加-src-lib文件夹-tools-js"><a href="#添加-src-lib文件夹-tools-js" class="header-anchor">#</a> 添加 src -&gt; lib文件夹 -&gt; tools.js</h4> <p>放一些与业务没有耦合，纯粹的是一种工具函数</p> <h4 id="添加-src-router文件夹"><a href="#添加-src-router文件夹" class="header-anchor">#</a> 添加 src -&gt; router文件夹</h4> <p>有一些复杂路由拦截的，要是全部放在 src文件夹下的 <strong>router.js</strong> 中会显得更加复杂。所以创建 <strong>router文件夹</strong> 对router进行统一管理。</p> <p>首先我们要将 <strong>router.js</strong> 放置到 <strong>router文件夹</strong> 中</p> <h4 id="添加-src-router文件夹-index-js"><a href="#添加-src-router文件夹-index-js" class="header-anchor">#</a> 添加 src -&gt; router文件夹 -&gt; index.js</h4> <p>首先，将 <strong>router.js</strong> 中的内容，全部复制，粘贴到 <strong>index.js</strong> 中，将 <strong>index.js</strong> 中的路由列表抽取取来，将 **router.js ** 中的全部内容删除，添加用es6的模块系统默认将他导出，我们在 <strong>router.js</strong> 中做路由的列表的配置， 需要的一些模块需要引入进来</p> <p>配置完成后 index.js</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Router from 'vue-router'
+import routes from './router'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: routes
+})
+
+</code></pre></div><p>配置完成后 router.js</p> <div class="language- extra-class"><pre class="language-text"><code>import Home from './views/Home.vue'
+export default [
+	{
+		path: '/',
+		name: 'home',
+		component: Home
+	},
+	{
+		path: '/about',
+		name: 'about',
+		// route level code-splitting
+		// this generates a separate chunk (about.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () =&gt; import(/* webpackChunkName: &quot;about&quot; */ './views/About.vue')
+	}
+]
+</code></pre></div><h4 id="添加-src-store文件夹"><a href="#添加-src-store文件夹" class="header-anchor">#</a> 添加 src -&gt; store文件夹</h4> <p>stroe文件夹主要用来处理vuex</p> <p>首先我们将 <strong>store.js</strong> 放置到 <strong>store</strong> 文件夹中，并改名为  <strong>index.js</strong></p> <p>项目最根本的一些仓库状态，我们要每一个都给他们生成一个文件 比如 <strong>state</strong> 就要给他生成一个 <strong>state.js</strong> 文件； <strong>mutations</strong> 就要给他生成一个 <strong>mutations.js</strong> 文件；  <strong>actions</strong> 就要给他生成一个 <strong>actions.js</strong> 文件，这些都是项目中最基础的一些状态。</p> <h4 id="操作-src-store文件夹-index-js"><a href="#操作-src-store文件夹-index-js" class="header-anchor">#</a> 操作 src -&gt; store文件夹 -&gt; index.js</h4> <p>将生成的3个文件， <strong>state.js</strong>， <strong>mutations.js</strong>， <strong>actions.js</strong>三个文件引入 <strong>index.js</strong> 中</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Vuex from 'vuex'
+
+import state from './state'
+import mutations from './mutations'
+import actions from './actions'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  state: state,
+  mutations: mutations,
+  actions: actions
+})
+</code></pre></div><p>使用es6模块，默认引用的时候，可以使用简写方式，对上面代码修改为：</p> <div class="language- extra-class"><pre class="language-text"><code>export default new Vuex.Store({
+  state
+  mutations
+  actions
+})
+</code></pre></div><p>随着我们的项目越加复杂，有一些板块，我们可以创建一些板块，模块，将他们加载进来，例如：首先我们要先创建一个 <strong>module文件夹</strong> 里面放着我们的板块，比如与用户相关的，比如用户的用户名，用户信息，都放在 <strong>user.js</strong> 中。</p> <div class="language- extra-class"><pre class="language-text"><code>const state = {
+  //
+}
+const mutations = {
+  //
+}
+const actions = {
+  //
+}
+
+// 使用es6模块将导出去
+export default {
+  state,
+  mutations,
+  actions
+}
+
+</code></pre></div><p>创建完成之后，如何引进来呢？ 在index.js中,首先import进来，然后再export default 的 modules中引入就行。示例代码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>import Vue from 'vue'
+import Vuex from 'vuex'
+// import config form './config/index'
+
+import state from './state'
+import mutations from './mutations'
+import actions from './actions'
+import user from './module/user'
+
+Vue.use(Vuex)
+
+export default new Vuex.Store({
+  state,
+  mutations,
+  actions,
+  modules: {
+    user
+  }
+})
+
+</code></pre></div><h4 id="修改-main-js"><a href="#修改-main-js" class="header-anchor">#</a> 修改 main.js</h4> <p>我们进行了很多操作，对router，store都发生了改变，所以我们要对 main.js 进行修改</p> <h4 id="添加-mock文件夹"><a href="#添加-mock文件夹" class="header-anchor">#</a> 添加 mock文件夹</h4> <p>如果有需要的话，我们需要添加一个mockjs，主要用来，在后台服务器还没有搭建完成，实现请求的模拟，返回一些模拟的数据。</p> <h5 id="首先安装mockjs-作为开发依赖"><a href="#首先安装mockjs-作为开发依赖" class="header-anchor">#</a> 首先安装mockjs,作为开发依赖</h5> <div class="language- extra-class"><pre class="language-text"><code>npm install mockjs -D
+</code></pre></div><h5 id="src-mock文件夹-index-js"><a href="#src-mock文件夹-index-js" class="header-anchor">#</a> src -&gt; mock文件夹 -&gt; index.js</h5> <div class="language- extra-class"><pre class="language-text"><code>// 引入Mock
+import Mock from 'mockjs'
+
+// 后面定义的接口模拟器都定义在中间位置
+
+// 最后要导出Mock
+export default Mock
+
+</code></pre></div><h2 id="基本配置讲-跨域配置"><a href="#基本配置讲-跨域配置" class="header-anchor">#</a> 基本配置讲，跨域配置</h2> <h4 id="vue-config-js配置"><a href="#vue-config-js配置" class="header-anchor">#</a> vue.config.js配置</h4> <h5 id="定义项目的基本路径"><a href="#定义项目的基本路径" class="header-anchor">#</a> 定义项目的基本路径</h5> <div class="language- extra-class"><pre class="language-text"><code>// 定义BASE_URL常量，我们分两种情况，当前是在开发环境还是要打包编译
+// 如果当前是开发环境（procution），那这种情况下我们的路径设置为了 /iview-admin/ 如果不是，路径为 /
+const BASE_URL = process.env.NODE_ENV === 'procution' ? '/iview-admin/' : '/'
+// 在上面一个 / (斜线) 代表你的项目是要指定在域名的根目录下，如果你的项目要指定在 iview-admin 下，那么你就需要这样写（'/iview-admin/'）
+
+baseUrl: BASE_URL,
+</code></pre></div><h5 id="颗粒化配置webpack-方便开发的配置"><a href="#颗粒化配置webpack-方便开发的配置" class="header-anchor">#</a> 颗粒化配置webpack（方便开发的配置）</h5> <p>它里面是一个方法，它里面是一个链式调用，首先我们需要在之前先定义一个方法，先引入node的path模块，接下来，定义一个resolve方法，后来加载路径。那么这种也可以进行简写,这个使用的是ES6的简短函数。然后引入src。 那么这个路径就代表你的当前路径拼接上你的src。</p> <p>.set('@', resolve('src')) 这样设置，@符号就代表src这个路径，以后再项目中引用到东西的地方，都可以使用@符号代替前面的src到这一级的目录。比如要引入api的话，就是 @/api 就可以了。为了方便，还会用 _C 来代替 src/components</p> <div class="language- extra-class"><pre class="language-text"><code>const path = require('path')
+// 首先我们需要先定义一个方法
+const resolve = dir =&gt; {
+  return path.join(__dirname, dir)
+}
+
+chainWebpack: config =&gt; {
+  config.resolve.alias
+    .set('@', resolve('src'))
+    .set('_c', resolve('src/components'))
+}
+</code></pre></div><p>resolve方法的简写</p> <div class="language- extra-class"><pre class="language-text"><code>const resolve = (dir) =&gt; path.join(__dirname, dir)
+
+</code></pre></div><h5 id="跨域配置"><a href="#跨域配置" class="header-anchor">#</a> 跨域配置</h5> <p>使用devServer配置，devServer来配置proxy， proxy的值是我们需要代理的url，如果我的代理url为：http://localhost:4000 那么他会告诉开发服务器，将任何未知请求，也就是没有匹配到静态文件的请求都代理到 这个url，来满足跨域的需求</p> <div class="language- extra-class"><pre class="language-text"><code>devServer: {
+    proxy: 'http://localhost:4000'
+  }
+</code></pre></div><h5 id="vue-config-js全部源码"><a href="#vue-config-js全部源码" class="header-anchor">#</a> vue.config.js全部源码</h5> <div class="language- extra-class"><pre class="language-text"><code>const path = require('path')
+// 首先我们需要先定义一个方法
+const resolve = dir =&gt; {
+  return path.join(__dirname, dir)
+}
+
+// 定义BASE_URL常量，我们分两种情况，当前是在开发环境还是要打包编译
+// 如果当前是开发环境（procution），那这种情况下我们的路径设置为了 /iview-admin/ 如果不是，路径为 /
+const BASE_URL = process.env.NODE_ENV === 'procution' ? '/iview-admin/' : '/'
+// 在上面一个 / (斜线) 代表你的项目是要指定在域名的根目录下，如果你的项目要指定在 iview-admin 下，那么你就需要这样写（'/iview-admin/'）
+
+module.exports = {
+  // 在每次保存的时候是否使用ESlint检查代码
+  lintOnSave: false,
+  // 定义项目的基本路径
+  baseUrl: BASE_URL,
+  // 颗粒化的配置一下webpack,它是一个方法，
+  chainWebpack: config =&gt; {
+    config.resolve.alias
+      .set('@', resolve('src'))
+      .set('_c', resolve('src/components'))
+  },
+  // 打包时不生成.map文件，会减少我们打包的体积，加快打包速度
+  productionSourceMap: false,
+  // 跨域配置
+  devServer: {
+    proxy: 'http://localhost:4000'
+  }
+}
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/iTNpotesBlog.github.io/notes/vue/vue2.html">
+        路由详解（一）——基础
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/iTNpotesBlog.github.io/assets/js/app.adf88209.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/2.9988f9de.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/163.6ebbb7e4.js" defer></script>
+  </body>
+</html>

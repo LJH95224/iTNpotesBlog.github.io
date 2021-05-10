@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>7. 函数的扩展 | Alfred个人主页</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/iTNpotesBlog.github.io/image/hero.png">
+    <meta name="description" content="Alfred个人博客">
+    
+    <link rel="preload" href="/iTNpotesBlog.github.io/assets/css/0.styles.c4297c3b.css" as="style"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/app.adf88209.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/2.9988f9de.js" as="script"><link rel="preload" href="/iTNpotesBlog.github.io/assets/js/77.8e8c781d.js" as="script"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/10.f46ae03e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/100.3b1485fc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/101.c7e7c363.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/102.2702d094.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/103.aa78fdbd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/104.d228600f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/105.4b2d5331.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/106.7d9123a0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/107.973f59de.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/108.5ee4b001.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/109.bec66f55.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/11.2c6b97ad.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/110.aea621d8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/111.8310c8f8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/112.1ad50fed.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/113.69f471ff.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/114.d9ca6dae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/115.730b6b91.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/116.6b3fac2a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/117.870d5870.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/118.1301b0c1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/119.24df945a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/12.459c441b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/120.8afeccac.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/121.e33663b1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/122.4395b705.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/123.e1dcad2c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/124.fbb8ccd7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/125.bb320edb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/126.ec08d7c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/127.af78ee83.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/128.20749767.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/129.d793d07d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/13.87f57fa7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/130.d57bdada.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/131.b9c7673d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/132.e348cf25.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/133.9c6ee168.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/134.cf41d56a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/135.a097a189.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/136.03f4d73c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/137.9dc2fafd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/138.2a9ee388.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/139.5d4eaa21.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/14.9a823fdf.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/140.01e8cbf7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/141.b78fa228.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/142.c8e38b22.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/143.867f330f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/144.83423c72.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/145.910fdd66.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/146.84531909.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/147.daf7952b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/148.7f0e2b86.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/149.0b9cf3a0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/15.b859687c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/150.58db92ad.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/151.8796d995.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/152.3178991b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/153.8129c797.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/154.cc600356.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/155.b9f61be6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/156.ed9365b6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/157.dd428dd4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/158.241a822f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/159.254742aa.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/16.358daa38.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/160.443f3934.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/161.c6fec0b8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/162.dfc3d689.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/163.6ebbb7e4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/164.7f0517d6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/165.b04bf87e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/166.0ebfefa6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/167.a71047e8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/168.26614bb6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/169.8664b1f9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/17.4b47ea89.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/170.bbdc97e5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/171.b8d3c603.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/172.b55f880b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/173.405791fe.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/174.9d11552f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/175.1433717a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/176.bc999383.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/177.d3cb2563.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/178.52489c1e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/179.71fc20c8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/18.b68e3487.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/180.2b77b1b5.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/181.0e314359.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/182.b04512c7.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/183.c2300002.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/184.5519654d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/185.c885a96b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/186.e5a1ee1c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/187.b4ced278.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/188.4d58cc74.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/189.16d5368f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/19.8d704ae6.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/20.5ad5afa3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/21.559c8400.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/22.2d2b0843.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/23.2fc390da.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/24.8c1712d3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/25.24e3fc1c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/26.821ae23b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/27.de800dc3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/28.2ee7239d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/29.2bd2bcba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/3.b3e43935.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/30.eb14bf1d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/31.b9081344.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/32.c915ea49.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/33.2ebf91a8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/34.731784eb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/35.fb881d82.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/36.624bac62.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/37.6976681f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/38.18af219a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/39.a8b539dc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/4.358e4147.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/40.324ef394.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/41.a368f027.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/42.6c0bfe84.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/43.0f7ed632.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/44.6f768146.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/45.c25d23ae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/46.f295fd46.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/47.21cd97d9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/48.07d5bcc1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/49.d89aaad9.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/5.7d96d3f8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/50.3c09a63d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/51.2bbf6554.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/52.9219fe24.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/53.0b871372.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/54.bbf362bd.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/55.fc1f2b3c.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/56.e00bee54.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/57.d4e0b48b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/58.61087ca3.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/59.4c57d653.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/6.9b4d2796.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/60.da4c7721.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/61.a829a3a4.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/62.823a7157.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/63.e21b77f2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/64.d14d4cae.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/65.a9c0de9d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/66.ec0c0c3e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/67.a83f19ba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/68.f69ebb6a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/69.6b1576d1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/7.c95f95d2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/70.6d4b4735.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/71.1ffff124.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/72.efb018ba.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/73.e2841182.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/74.eb44b2b8.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/75.41f88a99.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/76.1b808abe.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/78.ef6ec6c1.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/79.b865fe51.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/8.2095e5c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/80.4d10ec25.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/81.7d58c638.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/82.72aaf3c0.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/83.7a628029.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/84.a8d9d835.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/85.00d98d0e.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/86.fca36c28.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/87.c617078d.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/88.f03e51fb.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/89.5673327a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/9.9dda7952.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/90.c194997b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/91.5043bff2.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/92.4081c3fc.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/93.f33ed6ef.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/94.7ff2ce8f.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/95.fbd2616a.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/96.9cda6bec.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/97.9f0b779b.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/98.4742a843.js"><link rel="prefetch" href="/iTNpotesBlog.github.io/assets/js/99.6a976b86.js">
+    <link rel="stylesheet" href="/iTNpotesBlog.github.io/assets/css/0.styles.c4297c3b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/iTNpotesBlog.github.io/" class="home-link router-link-active"><!----> <span class="site-name">Alfred个人主页</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link router-link-active">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/iTNpotesBlog.github.io/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="开源项目" class="dropdown-title"><span class="title">开源项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="开源项目" class="mobile-dropdown-title"><span class="title">开源项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/problem/" class="nav-link">
+  常用问题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/commonMethods/" class="nav-link">
+  公用方法
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vscodePage/" class="nav-link">
+  vscode
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/.html" class="nav-link">
+  大文件上传和断点续传
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="技术笔记" class="dropdown-title"><span class="title">技术笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="技术笔记" class="mobile-dropdown-title"><span class="title">技术笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/linux/" class="nav-link">
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/cordova/" class="nav-link">
+  cordova
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/base/" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/vue/" class="nav-link">
+  vue技术栈
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/typeScript/" class="nav-link">
+  typeScript
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/notes/ECMAScript/" class="nav-link router-link-active">
+  ECMAScript 6 入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试题" class="dropdown-title"><span class="title">面试题</span> <span class="arrow down"></span></button> <button type="button" aria-label="面试题" class="mobile-dropdown-title"><span class="title">面试题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/javascript/" class="nav-link">
+  JS 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/vue/" class="nav-link">
+  Vue 题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/programme/" class="nav-link">
+  编程题
+</a></li><li class="dropdown-item"><!----> <a href="/iTNpotesBlog.github.io/interview/base/" class="nav-link">
+  基本面试题
+</a></li></ul></div></div><div class="nav-item"><a href="/iTNpotesBlog.github.io/aboutMe/" class="nav-link">
+  关于我
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具箱" class="dropdown-title"><span class="title">工具箱</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具箱" class="mobile-dropdown-title"><span class="title">工具箱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          在线服务
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.aliyun.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  阿里云
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          在线博客
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://juejin.im/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.zhihu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  知乎
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://www.jianshu.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  简书
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://blog.csdn.net/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  csdn
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://segmentfault.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  segmentfault
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://github.com/LJH95224" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript1.html" class="sidebar-link">1. let 和 const 命令</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript2.html" class="sidebar-link">2. 变量的解构赋值</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript3.html" class="sidebar-link">3. 字符串的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript4.html" class="sidebar-link">4. 字符串的新增方法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript5.html" class="sidebar-link">5. 正则的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript6.html" class="sidebar-link">6. 数值的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript7.html" aria-current="page" class="active sidebar-link">7. 函数的扩展</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript7.html#_1-函数参数的默认值" class="sidebar-link">1. 函数参数的默认值</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript7.html#基本用法" class="sidebar-link">基本用法</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript7.html#与解构赋值默认值结合使用" class="sidebar-link">与解构赋值默认值结合使用</a></li><li class="sidebar-sub-header"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript7.html#函数默认值的位置" class="sidebar-link">函数默认值的位置</a></li></ul></li></ul></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript8.html" class="sidebar-link">8. 数组的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript9.html" class="sidebar-link">9. 对象的扩展</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript10.html" class="sidebar-link">10. 对象的新增方法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript11.html" class="sidebar-link">11. Symbol</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript12.html" class="sidebar-link">12. Set 和 Map 数据结构</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript13.html" class="sidebar-link">13. Proxy</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript14.html" class="sidebar-link">14. Reflect</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript15.html" class="sidebar-link">15. Promise 对象</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript16.html" class="sidebar-link">16. Iterator 和 for...of 循环</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript17.html" class="sidebar-link">17. Generator 函数的语法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript18.html" class="sidebar-link">18. Generator 函数的异步应用</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript19.html" class="sidebar-link">19. async 函数</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript20.html" class="sidebar-link">20. Class 的基本语法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript21.html" class="sidebar-link">21. Class 继承</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript22.html" class="sidebar-link">22. Module 的语法</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript23.html" class="sidebar-link">23. Module 的加载实现</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript24.html" class="sidebar-link">24. 编程风格</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript25.html" class="sidebar-link">数据结构</a></li><li><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript26.html" class="sidebar-link">JS算法之深度优先遍历和广度优先遍历</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_7-函数的扩展"><a href="#_7-函数的扩展" class="header-anchor">#</a> 7. 函数的扩展</h1> <blockquote><ol><li>函数参数的默认值</li> <li>rest 函数</li> <li>严格模式</li> <li>name 属性</li> <li>箭头函数</li> <li>双冒号运算符</li> <li>尾调用优化</li> <li>函数参数的尾逗号</li></ol></blockquote> <h2 id="_1-函数参数的默认值"><a href="#_1-函数参数的默认值" class="header-anchor">#</a> 1. 函数参数的默认值</h2> <h3 id="基本用法"><a href="#基本用法" class="header-anchor">#</a> 基本用法</h3> <p>ES6之前， 不能直接为函数的参数指定默认值，只能采用变通的方法</p> <div class="language- extra-class"><pre class="language-text"><code>function log(x, y) {
+    y = y | 'World';
+}
+log('Hello') // Hello World
+log('Hello', 'China') // Hello China
+log('Hello', '') // Hello World
+</code></pre></div><p>上面代码检查函数，<strong>log</strong> 的参数 <strong>y</strong> 有没有赋值，如果没有，则指定默认值 <strong>world</strong> 。这种写法的缺点在于，如果参数 <strong>y</strong> 赋值了，但是对应的布尔值为 false， 则该赋值不起作用。就像上面代码的最后一行，参数 <strong>y</strong> 等于空字符，结果被改为默认值。</p> <p>为了避免这个问题，通过需要先判断一下参数 <strong>y</strong> 是否被赋值，如果没有， 再等于默认值</p> <div class="language- extra-class"><pre class="language-text"><code>if (typeof y === 'undefined') {
+    y = 'World';
+}
+</code></pre></div><p>ES6 允许为函数的参数设置默认值，即直接写在参数定义的后面。</p> <div class="language- extra-class"><pre class="language-text"><code>function log(x, y = 'World') {
+    console.log(x, y);
+}
+log('Hello') // Hello World
+log('Hello', 'China') // Hello China
+log('Hello', '') // Hello
+</code></pre></div><p>可以看到， ES6的写法比ES5简洁许多，而且非常自然。 下面是另一个例子。</p> <div class="language- extra-class"><pre class="language-text"><code>function Point(x = 0, y = 0) {
+    this.x = x;
+    this.y = y;
+}
+
+const p = new Point();
+p // {x: 0, y: 0}
+</code></pre></div><p>除了简洁，ES6的写法还有两个好处： 首先阅读代码的人，可以立刻意识到哪些参数是可以省略的，不用查看函数体或文档；其次，有利于将来的代码优化，即使未来的版本在对外接口中，彻底拿掉这个参数，也不会导致以前的代码无法运行。</p> <p>参数变量是默认声明的，所以不能用 <strong>let</strong> 或 <strong>const</strong> 再次声明。</p> <div class="language- extra-class"><pre class="language-text"><code>function foo (x = 5) {
+  let x = 1; // error
+  const x = 2; // error
+}
+</code></pre></div><p>上面代码中，参数变量 <strong>x</strong> 是默认声明的，在函数体中，不能用 <strong>let</strong> 或 <strong>const</strong> 再次声明，否则会报错。</p> <p>使用参数默认值时，函数不能有同名参数。</p> <div class="language- extra-class"><pre class="language-text"><code>// 不报错
+function foo(x, x, y) {
+  // ...
+}
+
+// 报错
+function foo(x, x, y = 1) {
+  // ...
+}
+// SyntaxError: Duplicate parameter name not allowed in this context
+</code></pre></div><p>另外，一个容易忽略的地方是，参数默认值不是传值的，而是每次都重新计算默认值表达式的值。也就是说，参数默认值是惰性求值的。</p> <div class="language- extra-class"><pre class="language-text"><code>let x = 99;
+function foo(p = x + 1) {
+  console.log(p);
+}
+
+foo() // 100
+
+x = 100;
+foo() // 101
+</code></pre></div><p>上面代码中，参数 <strong>p</strong> 的默认值是 <strong>x + 1</strong>。这时，每次调用函数 <strong>foo</strong>，都会重新计算 <strong>x + 1</strong> ，而不是默认 <strong>p</strong> 等于 <strong>100</strong>。</p> <p>与解构赋值默认值结合使用</p> <h3 id="与解构赋值默认值结合使用"><a href="#与解构赋值默认值结合使用" class="header-anchor">#</a> 与解构赋值默认值结合使用</h3> <p>参数默认值可以与解构赋值的默认值，结合起来使用。</p> <div class="language- extra-class"><pre class="language-text"><code>function foo({x, y = 5}) {
+  console.log(x, y);
+}
+
+foo({}) // undefined 5
+foo({x: 1}) // 1 5
+foo({x: 1, y: 2}) // 1 2
+foo() // TypeError: Cannot read property 'x' of undefined
+</code></pre></div><p>上面代码只使用了对象的解构赋值默认值，没有使用函数参数的默认值。只有当函数 <strong>foo</strong> 的参数是一个对象时，变量 <strong>x</strong> 和 <strong>y</strong> 才会通过解构赋值生成。如果函数 <strong>foo</strong> 调用时没提供参数，变量 <strong>x</strong> 和 <strong>y</strong> 就不会生成，从而报错。通过提供函数参数的默认值，就可以避免这种情况。</p> <div class="language- extra-class"><pre class="language-text"><code>function foo({x, y = 5} = {}) {
+  console.log(x, y);
+}
+
+foo() // undefined 5
+</code></pre></div><p>上面代码指定，如果没有提供参数，函数 <strong>foo</strong> 的参数默认为一个空对象。</p> <p>下面是另一个解构赋值默认值的例子。</p> <div class="language- extra-class"><pre class="language-text"><code>function fetch(url, { body = '', method = 'GET', headers = {} }) {
+  console.log(method);
+}
+
+fetch('http://example.com', {})
+// &quot;GET&quot;
+
+fetch('http://example.com')
+// 报错
+</code></pre></div><p>上面代码中，如果函数 <strong>fetch</strong> 的第二个参数是一个对象，就可以为它的三个属性设置默认值。这种写法不能省略第二个参数，如果结合函数参数的默认值，就可以省略第二个参数。这时，就出现了双重默认值。</p> <div class="language- extra-class"><pre class="language-text"><code>function fetch(url, { body = '', method = 'GET', headers = {} } = {}) {
+  console.log(method);
+}
+fetch('http://example.com')
+// &quot;GET&quot;
+</code></pre></div><p>上面代码中， 函数 <strong>fetch</strong> 没有第二个参数时，函数参数的默认值就会生效，然后才是解构赋值的默认值生效，变量 <strong>method</strong> 才会取到默认值 <strong>GET</strong>。</p> <p>请问下面两种写法有什么差别呢？</p> <div class="language- extra-class"><pre class="language-text"><code>// 写法一
+function m1({x = 0, y = 0} = {}) {
+    return [x, y];
+}
+
+// 写法二
+function m2({x, y} = { x: 0, y: 0}) {
+    return [x, y];
+}
+</code></pre></div><p>上面两种写法都对函数的参数设定了默认值，区别是写法一函数参数的默认值是空对象，但是设置了对象解构赋值的默认值； 写法二函数参数的默认值是一个有具体属性的对象，但是没有设置对象解构赋值的默认值。</p> <div class="language- extra-class"><pre class="language-text"><code>// 写法一
+function m1({x = 0, y = 0} = {}) {
+    return [x, y];
+}
+
+// 写法二
+function m2({x, y} = { x: 0, y: 0}) {
+    return [x, y];
+}
+
+// 函数没有参数的情况
+m1() // [0, 0]
+m2() // [0, 0]
+
+// x 和 y 都有值的情况
+m1({x: 3, y: 8}) // [3, 8]
+m2({x: 3, y: 8}) // [3, 8]
+
+// x 有值，y 无值的情况
+m1({x: 3}) // [3, 0]
+m2({x: 3}) // [3, undefined]
+
+// x 和 y 都无值的情况
+m1({}) // [0, 0];
+m2({}) // [undefined, undefined]
+
+m1({z: 3}) // [0, 0]
+m2({z: 3}) // [undefined, undefined]
+</code></pre></div><h3 id="函数默认值的位置"><a href="#函数默认值的位置" class="header-anchor">#</a> 函数默认值的位置</h3> <p>通常情况下，定义了默认值得参数，应该是函数的尾参数，因为这样比较容易看出来，到底省略了哪些参数。如果非尾部的参数设置默认值，实际上这个参数是没法省略的。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript6.html" class="prev">
+        6. 数值的扩展
+      </a></span> <span class="next"><a href="/iTNpotesBlog.github.io/notes/ECMAScript/ECMAScript8.html">
+        8. 数组的扩展
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/iTNpotesBlog.github.io/assets/js/app.adf88209.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/2.9988f9de.js" defer></script><script src="/iTNpotesBlog.github.io/assets/js/77.8e8c781d.js" defer></script>
+  </body>
+</html>
